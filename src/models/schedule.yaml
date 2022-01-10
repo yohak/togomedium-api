@@ -1,0 +1,70 @@
+# model Schedule
+type: object
+properties:
+  id:
+    type: integer
+  work_result_id:
+    type: integer
+  user_id:
+    description: 担当者ID
+    type: integer
+  target_user_id:
+    description: サービス利用者ID
+    type: integer
+  contract_station_id:
+    type: integer
+  station_name:
+    type: string
+  schedule_type_code:
+    type: integer
+    description: >
+      ContractStationScheduleTypeではなく、ScheduleTypeのschedule_type_code
+        * `0` - ARRIVE
+        * `1` - LEAVE
+        * `2` - ROUTE
+        * `3` - STATION
+        * `4` - PRIVATE
+        * `5` - BLOCK
+    enum: [ 0,1,2,3,4,5 ]
+  title:
+    type: string
+  place:
+    type: string
+  care_service_name:
+    type: string
+  schedule_comments:
+    description: 申し送りコメントの数
+    type: integer
+  shift_change:
+    description: シフト変更依頼があるかどうか <br>詳細未定のため、暫定的に値はNULLとする。
+    type: boolean
+  started_at:
+    type: string
+    format: 'date-time'
+  ended_at:
+    type: string
+    format: 'date-time'
+  allday_flag:
+    type: boolean
+  repeat_type:
+    type: integer
+    enum: [ 0,1,2,3 ]
+    description: >
+      繰り返しパターン:
+        * `0` - NONE
+        * `1` - EVERYDAY
+        * `2` - WEEKLY
+        * `3` - MONTHLY
+  repeat_start_date:
+    type: string
+    format: 'date'
+  repeat_end_date:
+    type: string
+    format: 'date'
+  calendar_ym:
+    type: string
+    example: "202012"
+    description: DB内のパーティションキー。アプリ内で保持してPUSH/PUT時に送信する
+  lock_version:
+    type: number
+    description: 楽観ロックバージョン。アプリ内の値とサーバー内の値を比較する

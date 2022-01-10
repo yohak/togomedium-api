@@ -1,0 +1,66 @@
+get:
+  summary: gmdb_media_alignment_by_gmids
+  description: gmidをもとに複数の培地を検索し、アライメント情報を返す
+  parameters:
+    - name: gm-ids
+      in: query
+      schema:
+        type: string
+      description: コンマ区切りでの培地のid
+      example: aa,aaa
+
+  responses:
+    200:
+      description: ""
+      content:
+        application/json:
+          example:
+            $ref: '../examples/media-alignment-table.json'
+          schema:
+            type: object
+            properties:
+              media:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    gmid:
+                      type: string
+                    name:
+                      type: string
+                    components:
+                      type: array
+                      description: TAX IDのリスト
+                      items:
+                        type: string
+                    organisms:
+                      type: array
+                      description: GMO IDのリスト
+                      items:
+                        type: string
+              organisms:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    taxid:
+                      type: string
+                    name:
+                      type: string
+              components:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    gmoid:
+                      type: string
+                    name:
+                      type: string
+                    parent:
+                      type: string
+                      description:
+                        存在しない場合は `null` を入れる
+                    function:
+                      type: string
+                      description:
+                        存在しない場合は `null` を入れる

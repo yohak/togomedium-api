@@ -1,0 +1,39 @@
+type: object
+properties:
+  id:
+    type: integer
+  schedule_id:
+    type: number
+  work_result_id:
+    type: integer
+  expense_cost:
+    type: integer
+  expense_title:
+    type: string
+  expense_type:
+    type: integer
+    enum: [ 0,1,2 ]
+    description: >
+      経費タイプ:
+        * `0` - 通勤
+        * `1` - 移動
+        * `2` - 経費
+  remarks:
+    type: string
+  transport_dist:
+    type: integer
+  transport_time:
+    type: integer
+  transport_type:
+    type: integer
+    enum: [ 0,1,2,3,4,5,6 ]
+    description: >
+      移動タイプ。経費タイプが `2` 以外のときに使われる
+        * `0` - 徒歩
+        * `1` - 自転車
+        * `2` - バス電車
+        * `3` - バイク
+        * `4` - 軽自動車
+        * `5` - 普通車
+        * `6` - その他
+

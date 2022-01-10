@@ -1,0 +1,10 @@
+.DS_Store
+*.swp
+.vscode/
+typings/
+node_modules
+public/
+.idea/
+*.map
+redoc-static.html
+bundled.yaml

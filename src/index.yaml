@@ -1,0 +1,18 @@
+openapi: 3.0.0
+info:
+  title: Growth Medium API
+  description: Growth Medium API
+  version: "1"
+servers:
+  - url: http://growthmedium.org/sparqlist/api/
+    description: Staging 1
+paths:
+  /gmdb_media_by_taxon/:
+    $ref: 'core/media-by-taxon.yaml'
+  /gmdb_organisms_by_phenotypes/:
+    $ref: 'core/organisms-by-phenotypes.yaml'
+  /gmdb_media_by_attributes/:
+    $ref: 'core/media-by-attributes.yaml'
+  /gmdb_media_alignment_by_gmids/:
+    $ref: 'core/media-alignment-table.yaml'
+

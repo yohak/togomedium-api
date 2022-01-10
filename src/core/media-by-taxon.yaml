@@ -1,0 +1,30 @@
+get:
+  summary: gmdb_media_by_taxon
+  description: タクソンに紐付いた培地を検索し一覧を返す
+  parameters:
+    - name: taxids
+      in: query
+      schema:
+        type: string
+      description: コンマ区切りでのtaxid
+      example: aa,aaa
+
+  responses:
+    200:
+      description: ""
+      content:
+        application/json:
+          example:
+            $ref: '../examples/media-list.json'
+          schema:
+            type: object
+            properties:
+              media:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    gmid:
+                      type: string
+                    name:
+                      type: string

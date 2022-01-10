@@ -1,0 +1,24 @@
+# model ScheduleNote
+type: object
+description: 申し送り
+properties:
+  id:
+    type: string
+  schedule_id:
+    type: string
+  body:
+    type: string
+  commented_at:
+    type: string
+    format: 'date-time'
+  comment_user_id:
+    type: string
+  family_name:
+    type: string
+  first_name:
+    type: string
+  cancel_flag:
+    type: boolean
+  lock_version:
+    type: integer
+

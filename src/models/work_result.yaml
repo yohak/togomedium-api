@@ -1,0 +1,68 @@
+# model WorkResult
+type: object
+properties:
+  id:
+    type: integer
+    example: 1
+  schedule_id:
+    type: integer
+  contract_schedule_id:
+    type: integer
+    example: 1000
+  user_id:
+    description: 担当者ID
+    type: integer
+  target_user_id:
+    description: サービス利用者ID
+    type: integer
+  work_result_type_code:
+    type: integer
+    example: 0
+    enum: [0,1,2,3]
+    description: >
+      実績の状態
+        * `0` - NOT_YET
+        * `1` - ON_GOING
+        * `2` - DONE
+        * `3` - CANCEL
+  care_service_name:
+    type: string
+    description: サービス名称。HCR上で編集を行うとScheduleとは違う値を持つパターンがあるのでWorkResultででも保持する
+  started_at:
+    type: string
+    format: 'date-time'
+  ended_at:
+    type: string
+    format: 'date-time'
+  user_appearance_type:
+    type: integer
+    enum: [0,1,2]
+    description: >
+      利用者の満足度
+        * `0` - GOOD
+        * `1` - SOSO
+        * `2` - BAD
+  helper_satisfaction_type:
+    type: integer
+    enum: [ 0,1,2 ]
+    description: >
+      ヘルパーの満足度
+        * `0` - GOOD
+        * `1` - SOSO
+        * `2` - BAD
+  expenses:
+    type: integer
+    description: 経費の数
+  memo:
+    type: string
+    maxLength: 1500
+  family_memo:
+    type: string
+    maxLength: 1500
+  calendar_ym:
+    type: string
+    example: "202012"
+    description: DB内のパーティションキー。アプリ内で保持してPUSH/PUT時に送信する
+  lock_version:
+    type: number
+    description: 楽観ロックバージョン。アプリ内の値とサーバー内の値を比較する

@@ -1,0 +1,28 @@
+{
+  "name": "togomedium-api-documentation",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "lint": "swagger-cli validate src/index.yaml",
+    "bundle": "swagger-cli bundle src/index.yaml -o bundled.yaml",
+    "build": "redoc-cli bundle --output public/index.html src/index.yaml"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apidevtools/swagger-cli": "^4.0.4",
+    "browser-sync": "^2.26.14",
+    "chalk": "^4.1.1",
+    "express": "^4.17.1",
+    "redoc": "^2.0.0-rc.53",
+    "swagger-parser": "^10.0.2",
+    "swagger-ui-express": "^4.1.6",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "redoc-cli": "^0.10.4",
+    "speccy": "^0.11.0"
+  }
+}

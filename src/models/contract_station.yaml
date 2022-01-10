@@ -1,0 +1,9 @@
+type: object
+properties:
+  id:
+    type: integer
+  name:
+    type: string
+  can_use_app:
+    type: boolean
+    description: contract_stationのmobile_plus_flag。
