@@ -1,12 +1,10 @@
-{
-  "media": [
-    {
-      "gmid": "HM_D00001a",
-      "name": "REACTIVATION WITH LIQUID MEDIUM 1"
-    },
-    {
-      "gmid": "HM_D00065",
-      "name": "GYM STREPTOMYCES MEDIUM"
-    }
-  ]
-}
+[
+  {
+    "gmid": "HM_D00001a",
+    "name": "REACTIVATION WITH LIQUID MEDIUM 1"
+  },
+  {
+    "gmid": "HM_D00065",
+    "name": "GYM STREPTOMYCES MEDIUM"
+  }
+]

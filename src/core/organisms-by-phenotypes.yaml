@@ -9,15 +9,12 @@ get:
           example:
             $ref: '../examples/organism-list.json'
           schema:
-            type: object
-            properties:
-              organisms:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    taxid:
-                      type: string
-                    name:
-                      type: string
+            type: array
+            items:
+              type: object
+              properties:
+                taxid:
+                  type: string
+                name:
+                  type: string
 

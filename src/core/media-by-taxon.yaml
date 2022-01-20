@@ -17,14 +17,11 @@ get:
           example:
             $ref: '../examples/media-list.json'
           schema:
-            type: object
-            properties:
-              media:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    gmid:
-                      type: string
-                    name:
-                      type: string
+            type: array
+            items:
+              type: object
+              properties:
+                gmid:
+                  type: string
+                name:
+                  type: string
