@@ -34,6 +34,10 @@ npm run lint
 npm run build
 ```
 
+## コードフォーマット
+本プロジェクトではPrettierを採用している。  
+エディターの設定でyaml / json保存時にPrettierの実行を有効にすること。
+
 ## おすすめリソース
 
 VSCode ならnpm 不要でライブプレビューしながら編集できる。(ただしSwagger形式のプレビューなのでRedocとは見た目が異なる)  

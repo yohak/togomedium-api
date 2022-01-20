@@ -7,7 +7,7 @@ get:
       content:
         application/json:
           example:
-            $ref: '../examples/all-components.json'
+            $ref: "../examples/all-components.json"
           schema:
             type: array
             items:

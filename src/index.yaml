@@ -8,13 +8,12 @@ servers:
     description: Staging 1
 paths:
   /gmdb_media_by_taxon/:
-    $ref: 'core/media-by-taxon.yaml'
+    $ref: "core/media-by-taxon.yaml"
   /gmdb_organisms_by_phenotypes/:
-    $ref: 'core/organisms-by-phenotypes.yaml'
+    $ref: "core/organisms-by-phenotypes.yaml"
   /gmdb_media_by_attributes/:
-    $ref: 'core/media-by-attributes.yaml'
+    $ref: "core/media-by-attributes.yaml"
   /gmdb_media_alignment_by_gmids/:
-    $ref: 'core/media-alignment-table.yaml'
+    $ref: "core/media-alignment-table.yaml"
   /gmdb_all_components/:
-    $ref: 'core/all-components.yaml'
-
+    $ref: "core/all-components.yaml"
