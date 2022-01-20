@@ -1,0 +1,19 @@
+get:
+  summary: gmdb_all_components
+  description: すべての成分を返す
+  responses:
+    200:
+      description: ""
+      content:
+        application/json:
+          example:
+            $ref: '../examples/all-components.json'
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                gmoid:
+                  type: string
+                name:
+                  type: string

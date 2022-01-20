@@ -15,4 +15,6 @@ paths:
     $ref: 'core/media-by-attributes.yaml'
   /gmdb_media_alignment_by_gmids/:
     $ref: 'core/media-alignment-table.yaml'
+  /gmdb_all_components/:
+    $ref: 'core/all-components.yaml'
 
