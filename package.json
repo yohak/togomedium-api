@@ -15,7 +15,7 @@
     "@apidevtools/swagger-cli": "^4.0.4",
     "browser-sync": "^2.26.14",
     "chalk": "^4.1.1",
-    "express": "^4.17.1",
+    "express": "^4.17.2",
     "redoc": "^2.0.0-rc.53",
     "swagger-parser": "^10.0.2",
     "swagger-ui-express": "^4.3.0",
