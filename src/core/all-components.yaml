@@ -13,7 +13,7 @@ get:
             items:
               type: object
               properties:
-                gmoid:
+                gmo_id:
                   type: string
                 name:
                   type: string

@@ -2,7 +2,7 @@ get:
   summary: gmdb_media_alignment_by_gmids
   description: gmidをもとに複数の培地を検索し、アライメント情報を返す
   parameters:
-    - name: gm-ids
+    - name: gm_ids
       in: query
       schema:
         type: string
@@ -24,7 +24,7 @@ get:
                 items:
                   type: object
                   properties:
-                    gmid:
+                    gm_id:
                       type: string
                     name:
                       type: string
@@ -43,7 +43,7 @@ get:
                 items:
                   type: object
                   properties:
-                    taxid:
+                    tax_id:
                       type: string
                     name:
                       type: string
@@ -52,7 +52,7 @@ get:
                 items:
                   type: object
                   properties:
-                    gmoid:
+                    gmo_id:
                       type: string
                     name:
                       type: string

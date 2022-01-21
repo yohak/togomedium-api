@@ -1,11 +1,16 @@
 openapi: 3.0.0
 info:
   title: Growth Medium API
-  description: Growth Medium API
+  description: |
+    # これは何？
+    TogoMedium データベースを検索するためのAPI集
+    # 表記ルール
+    * **IDの記述法**<br>
+    `xxx-id` `xxx-ids` の方式に統一する。<br>
+    従来から存在しているSPAQList内では`gmoid`等、区切りの扱いが統一されていないものがあるがあるので注意が必要。
   version: "1"
 servers:
   - url: http://growthmedium.org/sparqlist/api/
-    description: Staging 1
 paths:
   /gmdb_media_by_taxon/:
     $ref: "core/media-by-taxon.yaml"

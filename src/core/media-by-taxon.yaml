@@ -2,11 +2,11 @@ get:
   summary: gmdb_media_by_taxon
   description: タクソンに紐付いた培地を検索し一覧を返す
   parameters:
-    - name: taxids
+    - name: tax_ids
       in: query
       schema:
         type: string
-      description: コンマ区切りでのtaxid
+      description: コンマ区切りでのtax_id
       example: aa,aaa
 
   responses:
@@ -21,7 +21,7 @@ get:
             items:
               type: object
               properties:
-                gmid:
+                gm_id:
                   type: string
                 name:
                   type: string

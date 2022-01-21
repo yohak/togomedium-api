@@ -1,18 +1,18 @@
 [
   {
-    "taxid": "384676",
+    "tax_id": "384676",
     "name": "Pseudomonas entomophila L48"
   },
   {
-    "taxid": "643561",
+    "tax_id": "643561",
     "name": "Acidovorax avenae subsp. avenae ATCC 19860"
   },
   {
-    "taxid": "316284",
+    "tax_id": "316284",
     "name": "Streptomyces noursei ATCC 11455"
   },
   {
-    "taxid": "446462",
+    "tax_id": "446462",
     "name": "Actinosynnema mirum DSM 43827"
   }
 ]

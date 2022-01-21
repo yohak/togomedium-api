@@ -2,11 +2,11 @@ get:
   summary: gmdb_media_by_attributes
   description: 培地の属性に基づいて検索を行う
   parameters:
-    - name: gmo-ids
+    - name: gmo_ids
       in: query
       schema:
         type: string
-      description: コンマ区切りでのgmo-id
+      description: コンマ区切りでのgmo_id
       example: aa,aaa
 
   responses:
@@ -21,7 +21,7 @@ get:
             items:
               type: object
               properties:
-                gmid:
+                gm_id:
                   type: string
                 name:
                   type: string

@@ -6,7 +6,6 @@ get:
       in: query
       schema:
         type: string
-        description:
         example: 2157
   responses:
     200:
