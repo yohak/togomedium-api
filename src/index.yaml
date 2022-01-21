@@ -18,7 +18,7 @@ paths:
     $ref: "core/organisms-by-phenotypes.yaml"
   /gmdb_media_by_attributes/:
     $ref: "core/media-by-attributes.yaml"
-  /gmdb_media_alignment_by_gmids/:
+  /gmdb_media_alignment_by_gm_ids/:
     $ref: "core/media-alignment-table.yaml"
   /gmdb_all_components/:
     $ref: "core/all-components.yaml"

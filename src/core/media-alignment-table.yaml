@@ -1,6 +1,6 @@
 get:
-  summary: gmdb_media_alignment_by_gmids
-  description: gmidをもとに複数の培地を検索し、アライメント情報を返す
+  summary: gmdb_media_alignment_by_gm_ids
+  description: gm_idをもとに複数の培地を検索し、アライメント情報を返す
   parameters:
     - name: gm_ids
       in: query
