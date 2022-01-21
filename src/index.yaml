@@ -6,7 +6,7 @@ info:
     TogoMedium データベースを検索するためのAPI集
     # 表記ルール
     * **IDの記述法**<br>
-    `xxx-id` `xxx-ids` の方式に統一する。<br>
+    `xxx_id` `xxx_ids` の方式に統一する。<br>
     従来から存在しているSPAQList内では`gmoid`等、区切りの扱いが統一されていないものがあるがあるので注意が必要。
   version: "1"
 servers:
