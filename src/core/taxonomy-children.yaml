@@ -1,0 +1,26 @@
+get:
+  summary: gmdb_taxonomy_children
+  description: タクソノミーの子階層を取得する
+  parameters:
+    - name: tax_id
+      in: query
+      schema:
+        type: string
+        description:
+        example: 2157
+  responses:
+    200:
+      description: ""
+      content:
+        application/json:
+          example:
+            $ref: "../examples/taxon-list.json"
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                taxid:
+                  type: string
+                name:
+                  type: string

@@ -17,3 +17,5 @@ paths:
     $ref: "core/media-alignment-table.yaml"
   /gmdb_all_components/:
     $ref: "core/all-components.yaml"
+  /gmdb_taxonomy_children/:
+    $ref: "core/taxonomy-children.yaml"
