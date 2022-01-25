@@ -19,7 +19,7 @@ get:
             items:
               type: object
               properties:
-                taxid:
+                tax_id:
                   type: string
                 name:
                   type: string
