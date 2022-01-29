@@ -3,7 +3,7 @@ get:
   description: 様々な表現型情報から生物種を検索する
   responses:
     200:
-      description: ""
+      description: SUCCESS
       content:
         application/json:
           example:

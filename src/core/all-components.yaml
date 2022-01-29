@@ -3,7 +3,7 @@ get:
   description: すべての成分を返す
   responses:
     200:
-      description: ""
+      description: SUCCESS
       content:
         application/json:
           example:
