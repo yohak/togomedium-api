@@ -25,3 +25,5 @@ get:
                   type: string
                 name:
                   type: string
+                rank:
+                  type: string

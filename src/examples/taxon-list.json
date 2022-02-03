@@ -1,18 +1,22 @@
 [
   {
     "tax_id": "28890",
-    "name": "Euryarchaeota"
+    "name": "Euryarchaeota",
+    "rank": "Phylum"
   },
   {
     "tax_id": "28889",
-    "name": "Crenarchaeota"
+    "name": "Crenarchaeota",
+    "rank": "Phylum"
   },
   {
     "tax_id": "651137",
-    "name": "Thaumarchaeota"
+    "name": "Thaumarchaeota",
+    "rank": "Phylum"
   },
   {
     "tax_id": "192989",
-    "name": "Nanoarchaeota"
+    "name": "Nanoarchaeota",
+    "rank": "Phylum"
   }
 ]
