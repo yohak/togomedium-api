@@ -6,6 +6,7 @@ get:
   parameters:
     - name: tax_id
       in: query
+      required: true
       schema:
         type: string
         example: 2157

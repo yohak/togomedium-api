@@ -4,6 +4,7 @@ get:
   parameters:
     - name: tax_ids
       in: query
+      required: true
       schema:
         type: string
       description: コンマ区切りでのtax_id

@@ -4,6 +4,7 @@ get:
   parameters:
     - name: gm_ids
       in: query
+      required: true
       schema:
         type: string
       description: コンマ区切りでの培地のid

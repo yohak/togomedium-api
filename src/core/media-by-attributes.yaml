@@ -4,6 +4,7 @@ get:
   parameters:
     - name: gmo_ids
       in: query
+      required: true
       schema:
         type: string
       description: コンマ区切りでのgmo_id
