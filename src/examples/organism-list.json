@@ -1,18 +1,22 @@
 [
   {
     "tax_id": "384676",
-    "name": "Pseudomonas entomophila L48"
+    "name": "Pseudomonas entomophila L48",
+    "exact_match": true
   },
   {
     "tax_id": "643561",
-    "name": "Acidovorax avenae subsp. avenae ATCC 19860"
+    "name": "Acidovorax avenae subsp. avenae ATCC 19860",
+    "exact_match": false
   },
   {
     "tax_id": "316284",
-    "name": "Streptomyces noursei ATCC 11455"
+    "name": "Streptomyces noursei ATCC 11455",
+    "exact_match": false
   },
   {
     "tax_id": "446462",
-    "name": "Actinosynnema mirum DSM 43827"
+    "name": "Actinosynnema mirum DSM 43827",
+    "exact_match": false
   }
 ]

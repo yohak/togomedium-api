@@ -26,3 +26,5 @@ get:
                   type: string
                 name:
                   type: string
+                exact_match:
+                  type: boolean

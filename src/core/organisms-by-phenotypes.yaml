@@ -21,35 +21,35 @@ get:
         type: string
         example: 0,15
     - name: MPO_10002
-      description: Oxygen requirement
+      description: Oxygen requirement (単一のMPO IDを送る)
       in: query
       schema:
         type: string
-        example: MPO_04002,MPO_04003
+        example: MPO_04002
     - name: MPO_07001
-      description: Gram Strain
+      description: Gram Strain (単一のMPO IDを送る)
       in: query
       schema:
         type: string
-        example: MPO_07002,MPO_07003
+        example: MPO_07002
     - name: MPO_02000
-      description: Motility
+      description: Motility (単一のMPO IDを送る)
       in: query
       schema:
         type: string
-        example: MPO_02001,MPO_02002
+        example: MPO_02001
     - name: MPO_01001
-      description: Cell shape
+      description: Cell shape (単一のMPO IDを送る)
       in: query
       schema:
         type: string
-        example: MPO_01015,MPO_01003
+        example: MPO_01015
     - name: MPO_03006
-      description: Salinity
+      description: Salinity (単一のMPO IDを送る)
       in: query
       schema:
         type: string
-        example: MPO_03007,MPO_03008
+        example: MPO_03007 (単一のMPO IDを送る)
   responses:
     200:
       description: SUCCESS
