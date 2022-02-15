@@ -1,0 +1,9 @@
+get:
+  summary: gmdb_medium_by_gmid
+  description: >
+    培地の詳細を返す
+  tags:
+    - Stanza
+  responses:
+    200:
+      description: SUCCESS

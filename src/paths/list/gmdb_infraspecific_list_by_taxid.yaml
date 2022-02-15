@@ -1,0 +1,10 @@
+get:
+  summary: gmdb_infraspecific_list_by_taxid
+  description: >
+    タクソン詳細ページで使用<br>
+    タクソンに含まれる生物種をリストアップする
+  tags:
+    - List Stanza
+  responses:
+    200:
+      description: List Stanza

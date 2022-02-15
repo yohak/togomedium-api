@@ -1,0 +1,10 @@
+get:
+  summary: gmdb_list_similar_media_by_gmid
+  description: >
+    培地詳細で使用<br>
+    GM_IDを元に似た培地をリストアップする
+  tags:
+    - List Stanza
+  responses:
+    200:
+      description: SUCCESS

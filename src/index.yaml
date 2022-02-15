@@ -40,6 +40,57 @@ paths:
     $ref: "paths/y2021/all_components.yaml"
   /gmdb_taxonomy_children/:
     $ref: "paths/y2021/taxonomy_children.yaml"
+  #####
+  /gmdb_component_by_gmoid:
+    $ref: "paths/stanza/gmdb_component_by_gmoid.yaml"
+  /gmdb_medium_by_gmid:
+    $ref: "paths/stanza/gmdb_medium_by_gmid.yaml"
+  /gmdb_organism_by_taxid:
+    $ref: "paths/stanza/gmdb_organism_by_taxid.yaml"
+  /gmdb_taxonomic_rank_by_taxid:
+    $ref: "paths/stanza/gmdb_taxonomic_rank_by_taxid.yaml"
+  /gms_by_kegg_tids_3:
+    $ref: "paths/stanza/gms_by_kegg_tids_3.yaml"
+  /gms_kegg_code_tid:
+    $ref: "paths/stanza/gms_kegg_code_tid.yaml"
+  /list_taxons_by_rank:
+    $ref: "paths/stanza/list_taxons_by_rank.yaml"
+  #####
+  /gmdb_infraspecific_list_by_taxid:
+    $ref: "paths/list/gmdb_infraspecific_list_by_taxid.yaml"
+  /gmdb_list_components_by_gmoids:
+    $ref: "paths/list/gmdb_list_components_by_gmoids.yaml"
+  /gmdb_list_components_by_keyword:
+    $ref: "paths/list/gmdb_list_components_by_keyword.yaml"
+  /gmdb_list_media:
+    $ref: "paths/list/gmdb_list_media.yaml"
+  /gmdb_list_organisms_by_keywords:
+    $ref: "paths/list/gmdb_list_organisms_by_keywords.yaml"
+  /gmdb_list_media_by_gmids:
+    $ref: "paths/list/gmdb_list_media_by_gmids.yaml"
+  /gmdb_list_media_by_keyword:
+    $ref: "paths/list/gmdb_list_media_by_keyword.yaml"
+  /gmdb_list_organisms_by_keyword:
+    $ref: "paths/list/gmdb_list_organisms_by_keyword.yaml"
+  /gmdb_list_organisms_by_taxids:
+    $ref: "paths/list/gmdb_list_organisms_by_taxids.yaml"
+  /gmdb_list_similar_media_by_gmid:
+    $ref: "paths/list/gmdb_list_similar_media_by_gmid.yaml"
+  /gmdb_media_by_gmoid:
+    $ref: "paths/list/gmdb_media_by_gmoid.yaml"
+  /gmdb_media_by_taxid:
+    $ref: "paths/list/gmdb_media_by_taxid.yaml"
+  /gmdb_organisms_by_gmid:
+    $ref: "paths/list/gmdb_organisms_by_gmid.yaml"
+  /gmdb_stat_phylum_gm:
+    $ref: "paths/list/gmdb_stat_phylum_gm.yaml"
+  /list_components:
+    $ref: "paths/list/list_components.yaml"
+  /list_media:
+    $ref: "paths/list/list_media.yaml"
+  /list_organisms:
+    $ref: "paths/list/list_organisms.yaml"
+  #####
   /adjacent_prefectures:
     get:
       summary: adjacent_prefectures
@@ -56,137 +107,6 @@ paths:
       responses:
         200:
           description: Unknown
-  /gmdb_component_by_gmoid:
-    get:
-      summary: gmdb_component_by_gmoid
-      description: >
-        コンポーネント詳細ページで使用
-      tags:
-        - Stanza
-      responses:
-        200:
-          description: SUCCESS
-  /gmdb_infraspecific_list_by_taxid:
-    get:
-      summary: gmdb_infraspecific_list_by_taxid
-      description: >
-        タクソン詳細ページで使用<br>
-        タクソンに含まれる生物種をリストアップする
-      tags:
-        - List Stanza
-      responses:
-        200:
-          description: List Stanza
-  /gmdb_list_components_by_gmoids:
-    get:
-      summary: gmdb_list_components_by_gmoids
-      description: >
-        自由検索で使用<br>
-        GMO_IDを元にコンポーネントをリストアップする
-      tags:
-        - List Stanza
-      responses:
-        200:
-          description: SUCCESS
-  /gmdb_list_components_by_keyword:
-    get:
-      summary: gmdb_list_components_by_keyword
-      description: >
-        自由検索で使用<br>
-        キーワードを元にコンポーネントをリストアップする
-      tags:
-        - List Stanza
-      responses:
-        200:
-          description: SUCCESS
-  /gmdb_list_media:
-    get:
-      deprecated: true
-      summary: gmdb_list_media
-      description: >
-        `list_media` と機能被り？サイト上では不使用
-      tags:
-        - Unused
-      responses:
-        200:
-          description: Unknown
-  /gmdb_list_media_by_gmids:
-    get:
-      summary: gmdb_list_media_by_gmids
-      description: >
-        自由検索で使用<br>
-        GMIDを元に培地をリストアップする
-      tags:
-        - List Stanza
-      responses:
-        200:
-          description: SUCCESS
-  /gmdb_list_media_by_keyword:
-    get:
-      summary: gmdb_list_media_by_keyword
-      description: >
-        自由検索で使用<br>
-        キーワードを元に培地をリストアップする
-      tags:
-        - List Stanza
-      responses:
-        200:
-          description: SUCCESS
-  /gmdb_list_organisms_by_keyword:
-    get:
-      summary: gmdb_list_organisms_by_keyword
-      description: >
-        自由検索で使用<br>
-        キーワードを元に生物をリストアップする
-      tags:
-        - List Stanza
-      responses:
-        200:
-          description: SUCCESS
-  /gmdb_list_organisms_by_keywords:
-    get:
-      deprecated: true
-      summary: gmdb_list_organisms_by_keywords
-      description: >
-        List Stanza導入前に使用していた
-      tags:
-        - Unused
-      responses:
-        200:
-          description: DEPRECATED
-  /gmdb_list_organisms_by_taxids:
-    get:
-      summary: gmdb_list_organisms_by_taxids
-      description: >
-        自由検索で使用<br>
-        TAX_IDを元に生物をリストアップする
-      tags:
-        - List Stanza
-      responses:
-        200:
-          description: SUCCESS
-  /gmdb_list_similar_media_by_gmid:
-    get:
-      summary: gmdb_list_similar_media_by_gmid
-      description: >
-        培地詳細で使用<br>
-        GM_IDを元に似た培地をリストアップする
-      tags:
-        - List Stanza
-      responses:
-        200:
-          description: SUCCESS
-  /gmdb_media_by_gmoid:
-    get:
-      summary: gmdb_media_by_gmoid
-      description: >
-        コンポーネント詳細で使用<br>
-        GMO_IDを元に紐付いた培地をリストアップする
-      tags:
-        - List Stanza
-      responses:
-        200:
-          description: SUCCESS
   /gmdb_media_by_gmoid_okbp:
     get:
       summary: gmdb_media_by_gmoid_okbp
@@ -207,27 +127,6 @@ paths:
       responses:
         200:
           description: Unknown
-  /gmdb_media_by_taxid:
-    get:
-      summary: gmdb_media_by_taxid
-      description: >
-        生物種及びタクソン詳細ページで使用。<br>
-        TAX_IDを元に紐付いた培地をリストアップする
-      tags:
-        - List Stanza
-      responses:
-        200:
-          description: SUCCESS
-  /gmdb_medium_by_gmid:
-    get:
-      summary: gmdb_medium_by_gmid
-      description: >
-        培地の詳細を返す
-      tags:
-        - Stanza
-      responses:
-        200:
-          description: SUCCESS
   /gmdb_medium_by_gmid__TEST:
     get:
       summary: gmdb_medium_by_gmid__TEST
@@ -238,16 +137,6 @@ paths:
       responses:
         200:
           description: Unknown
-  /gmdb_organism_by_taxid:
-    get:
-      summary: gmdb_organism_by_taxid
-      description: >
-        生物の詳細を返す
-      tags:
-        - Stanza
-      responses:
-        200:
-          description: SUCCESS
   /gmdb_organism_by_taxid_okbp:
     get:
       summary: gmdb_organism_by_taxid_okbp
@@ -258,58 +147,6 @@ paths:
       responses:
         200:
           description: Unknown
-  /gmdb_organisms_by_gmid:
-    get:
-      summary: gmdb_organisms_by_gmid
-      description: >
-        培地ページで使用。<br>
-        GM_IDを元に紐付いた生物種をリストアップする
-      tags:
-        - List Stanza
-      responses:
-        200:
-          description: SUCCESS
-  /gmdb_stat_phylum_gm:
-    get:
-      summary: gmdb_stat_phylum_gm
-      description: >
-        Statisticsページで使用。<br>
-        Phylumごとに対応する培地の統計をリストアップする
-      tags:
-        - List Stanza
-      responses:
-        200:
-          description: SUCCESS
-  /gmdb_taxonomic_rank_by_taxid:
-    get:
-      summary: gmdb_taxonomic_rank_by_taxid
-      description: >
-        タクソンの詳細を返す
-      tags:
-        - Stanza
-      responses:
-        200:
-          description: SUCCESS
-  /gms_by_kegg_tids_3:
-    get:
-      summary: gms_by_kegg_tids_3
-      description: >
-        Alignmentページで使用
-      tags:
-        - Stanza
-      responses:
-        200:
-          description: SUCCESS
-  /gms_kegg_code_tid:
-    get:
-      summary: gms_kegg_code_tid
-      description: >
-        Alignmentページで使用
-      tags:
-        - Stanza
-      responses:
-        200:
-          description: SUCCESS
   /interview-form-ex2-mod:
     get:
       summary: interview-form-ex2-mod
@@ -318,44 +155,3 @@ paths:
       responses:
         200:
           description: Unknown
-  /list_components:
-    get:
-      summary: list_components
-      description: >
-        コンポーネント一覧をリストアップする
-      tags:
-        - List Stanza
-      responses:
-        200:
-          description: SUCCESS
-  /list_media:
-    get:
-      summary: list_media
-      description: >
-        培地一覧をリストアップする
-      tags:
-        - List Stanza
-      responses:
-        200:
-          description: SUCCESS
-  /list_organisms:
-    get:
-      summary: list_organisms
-      description: >
-        生物種一覧をリストアップする
-      tags:
-        - List Stanza
-      responses:
-        200:
-          description: SUCCESS
-  /list_taxons_by_rank:
-    get:
-      summary: list_taxons_by_rank
-      description: >
-        トップページで使用<br>
-        TAX_ID以下にある指定した階層のタクソン/生物種を返す
-      tags:
-        - Stanza
-      responses:
-        200:
-          description: SUCCESS

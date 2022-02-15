@@ -1,0 +1,10 @@
+get:
+  summary: list_taxons_by_rank
+  description: >
+    トップページで使用<br>
+    TAX_ID以下にある指定した階層のタクソン/生物種を返す
+  tags:
+    - Stanza
+  responses:
+    200:
+      description: SUCCESS

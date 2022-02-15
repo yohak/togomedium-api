@@ -1,0 +1,9 @@
+get:
+  summary: gmdb_taxonomic_rank_by_taxid
+  description: >
+    タクソンの詳細を返す
+  tags:
+    - Stanza
+  responses:
+    200:
+      description: SUCCESS

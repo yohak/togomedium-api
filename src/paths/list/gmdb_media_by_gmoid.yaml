@@ -1,0 +1,10 @@
+get:
+  summary: gmdb_media_by_gmoid
+  description: >
+    コンポーネント詳細で使用<br>
+    GMO_IDを元に紐付いた培地をリストアップする
+  tags:
+    - List Stanza
+  responses:
+    200:
+      description: SUCCESS
