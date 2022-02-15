@@ -2,6 +2,7 @@ get:
   summary: gmdb_media_by_taxon
   tags:
     - Media Finder
+    - Y2021
   description: タクソンに紐付いた培地を検索し一覧を返す
   parameters:
     - name: tax_ids

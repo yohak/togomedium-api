@@ -12,6 +12,7 @@ info:
 servers:
   - url: http://growthmedium.org/sparqlist/api/
 tags:
+  - name: Y2021
   - name: Media Finder
   - name: Alignment Table
   - name: List Stanza
@@ -21,8 +22,8 @@ tags:
 x-tagGroups:
   - name: API
     tags:
+      - Y2021
       - Media Finder
-      - Alignment Table
       - Stanza
       - List Stanza
       - Unused
