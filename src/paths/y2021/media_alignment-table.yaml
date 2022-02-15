@@ -19,7 +19,7 @@ get:
       content:
         application/json:
           example:
-            $ref: "../examples/media-alignment-table.json"
+            $ref: "../../examples/media-alignment-table.json"
           schema:
             type: object
             properties:

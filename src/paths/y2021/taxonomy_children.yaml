@@ -1,33 +1,33 @@
 get:
-  summary: gmdb_media_by_attributes
+  summary: gmdb_taxonomy_children
   tags:
     - Media Finder
     - Y2021
-  description: 培地の属性に基づいて検索を行う
+  description: |
+    タクソノミーの子階層を取得する<br>
+    子要素が存在しない場合は `[]` を返す
   parameters:
-    - name: gmo_ids
+    - name: tax_id
       in: query
       required: true
       schema:
         type: string
-      description: コンマ区切りでのgmo_id
-      example: aa,aaa
-
+        example: 2157
   responses:
     200:
       description: SUCCESS
       content:
         application/json:
           example:
-            $ref: "../examples/media-list.json"
+            $ref: "../../examples/taxon-list.json"
           schema:
             type: array
             items:
               type: object
               properties:
-                gm_id:
+                tax_id:
                   type: string
                 name:
                   type: string
-                exact_match:
-                  type: boolean
+                rank:
+                  type: string

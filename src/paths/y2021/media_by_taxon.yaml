@@ -19,7 +19,7 @@ get:
       content:
         application/json:
           example:
-            $ref: "../examples/media-list.json"
+            $ref: "../../examples/media-list.json"
           schema:
             type: array
             items:

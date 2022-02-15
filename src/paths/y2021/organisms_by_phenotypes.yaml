@@ -59,7 +59,7 @@ get:
       content:
         application/json:
           example:
-            $ref: "../examples/organism-list.json"
+            $ref: "../../examples/organism-list.json"
           schema:
             type: array
             items:

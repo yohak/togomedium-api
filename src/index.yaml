@@ -29,17 +29,17 @@ x-tagGroups:
       - Unused
 paths:
   /gmdb_media_by_taxon/:
-    $ref: "core/media_by_taxon.yaml"
+    $ref: "paths/y2021/media_by_taxon.yaml"
   /gmdb_organisms_by_phenotypes/:
-    $ref: "core/organisms_by_phenotypes.yaml"
+    $ref: "paths/y2021/organisms_by_phenotypes.yaml"
   /gmdb_media_by_attributes/:
-    $ref: "core/media_by_attributes.yaml"
+    $ref: "paths/y2021/media_by_attributes.yaml"
   /gmdb_media_alignment_by_gm_ids/:
-    $ref: "core/media_alignment-table.yaml"
+    $ref: "paths/y2021/media_alignment-table.yaml"
   /gmdb_all_components/:
-    $ref: "core/all_components.yaml"
+    $ref: "paths/y2021/all_components.yaml"
   /gmdb_taxonomy_children/:
-    $ref: "core/taxonomy_children.yaml"
+    $ref: "paths/y2021/taxonomy_children.yaml"
   /adjacent_prefectures:
     get:
       summary: adjacent_prefectures
