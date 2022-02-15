@@ -1,5 +1,7 @@
 get:
   summary: gmdb_media_alignment_by_gm_ids
+  tags:
+    - Alignment Table
   description: gm_idをもとに複数の培地を検索し、アライメント情報を返す
   parameters:
     - name: gm_ids

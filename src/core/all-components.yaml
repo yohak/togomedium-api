@@ -1,5 +1,7 @@
 get:
   summary: gmdb_all_components
+  tags:
+    - Media Finder
   description: すべての成分を返す
   responses:
     200:

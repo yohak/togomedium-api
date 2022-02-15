@@ -1,5 +1,7 @@
 get:
   summary: gmdb_media_by_attributes
+  tags:
+    - Media Finder
   description: 培地の属性に基づいて検索を行う
   parameters:
     - name: gmo_ids

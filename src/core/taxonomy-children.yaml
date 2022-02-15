@@ -1,5 +1,7 @@
 get:
   summary: gmdb_taxonomy_children
+  tags:
+    - Media Finder
   description: |
     タクソノミーの子階層を取得する<br>
     子要素が存在しない場合は `[]` を返す

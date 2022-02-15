@@ -1,5 +1,7 @@
 get:
   summary: gmdb_organisms_by_phenotypes
+  tags:
+    - Media Finder
   description: 様々な表現型情報から生物種を検索する
   parameters:
     - name: growth_temp
