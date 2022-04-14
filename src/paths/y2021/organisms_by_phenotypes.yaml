@@ -53,6 +53,16 @@ get:
       schema:
         type: string
         example: MPO_03007 (単一のMPO IDを送る)
+    - name: limit
+      in: query
+      schema:
+        type: number
+      description: ペジネーション 表示件数
+    - name: offset
+      in: query
+      schema:
+        type: number
+      description: ペジネーション オフセット
   responses:
     200:
       description: SUCCESS
@@ -61,11 +71,20 @@ get:
           example:
             $ref: "../../examples/organism-list.json"
           schema:
-            type: array
-            items:
-              type: object
-              properties:
-                tax_id:
-                  type: string
-                name:
-                  type: string
+            type: object
+            properties:
+              total:
+                type: number
+              offset:
+                type: number
+              limit:
+                type: number
+              contents:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    tax_id:
+                      type: string
+                    name:
+                      type: string

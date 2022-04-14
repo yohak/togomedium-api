@@ -12,6 +12,16 @@ get:
         type: string
       description: コンマ区切りでのgmo_id
       example: aa,aaa
+    - name: limit
+      in: query
+      schema:
+        type: number
+      description: ペジネーション 表示件数
+    - name: offset
+      in: query
+      schema:
+        type: number
+      description: ペジネーション オフセット
 
   responses:
     200:
@@ -21,13 +31,22 @@ get:
           example:
             $ref: "../../examples/media-list.json"
           schema:
-            type: array
-            items:
-              type: object
-              properties:
-                gm_id:
-                  type: string
-                name:
-                  type: string
-                exact_match:
-                  type: boolean
+            type: object
+            properties:
+              total:
+                type: number
+              offset:
+                type: number
+              limit:
+                type: number
+              contents:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    gm_id:
+                      type: string
+                    name:
+                      type: string
+                    exact_match:
+                      type: boolean
