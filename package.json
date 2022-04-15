@@ -22,7 +22,7 @@
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
-    "prettier": "^2.5.1",
+    "prettier": "^2.6.2",
     "redoc-cli": "^0.13.10"
   }
 }
