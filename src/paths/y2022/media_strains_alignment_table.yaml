@@ -1,0 +1,59 @@
+get:
+  summary: gmdb_media_strains_alignment_by_gm_ids
+  tags:
+    - Stanza
+    - Y2022
+  description: gm_idを元に複数の培地を検索し、生物種のアライメント情報を返す
+  parameters:
+    - name: gm_ids
+      in: query
+      required: true
+      schema:
+        type: string
+      description: コンマ区切りでの培地のid
+      example: aa,aaa
+  responses:
+    200:
+      description: SUCCESS
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              media:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    gm_id:
+                      type: string
+                    label:
+                      type: string
+                    strains:
+                      type: array
+                      description: strain id
+                      items:
+                        type: string
+
+              strains:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    label:
+                      type: string
+                    lineage:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          rank:
+                            type: string
+                          tax_id:
+                            type: string
+                            nullable: true
+                          label:
+                            type: string
+                            nullable: true

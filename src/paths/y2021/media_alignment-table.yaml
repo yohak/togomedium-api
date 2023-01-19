@@ -3,7 +3,7 @@ get:
   tags:
     - Stanza
     - Y2021
-  description: gm_idをもとに複数の培地を検索し、アライメント情報を返す
+  description: gm_idをもとに複数の培地を検索し、成分のアライメント情報を返す
   parameters:
     - name: gm_ids
       in: query

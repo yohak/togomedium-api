@@ -1,0 +1,28 @@
+get:
+  summary: gmdb_components_with_components
+  tags:
+    - Media Finder
+    - Y2022
+  description: 指定した成分が含まれる培地をさがす。それらの培地に含まれるすべての成分を返す。
+  parameters:
+    - name: gmo_ids
+      in: query
+      schema:
+        type: string
+      description: コンマ区切りのgmo_id。省略された場合はすべての成分を返す
+  responses:
+    200:
+      description: SUCCESS
+      content:
+        application/json:
+          example:
+            $ref: "../../examples/all-components.json"
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                gmo_id:
+                  type: string
+                name:
+                  type: string

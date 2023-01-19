@@ -22,12 +22,17 @@ tags:
 x-tagGroups:
   - name: API
     tags:
+      - Y2022
       - Y2021
       - Media Finder
       - Stanza
       - List Stanza
       - Unused
 paths:
+  /gmdb_components_with_components/:
+    $ref: "paths/y2022/components_with_components.yaml"
+  /gmdb_gmdb_media_organisms_alignment_by_gm_ids/:
+    $ref: "paths/y2022/media_strains_alignment_table.yaml"
   /gmdb_media_by_taxon/:
     $ref: "paths/y2021/media_by_taxon.yaml"
   /gmdb_organisms_by_phenotypes/:
