@@ -30,6 +30,8 @@ get:
                   properties:
                     gm_id:
                       type: string
+                    original_media_id:
+                      type: string
                     name:
                       type: string
                     components:
