@@ -1,0 +1,54 @@
+get:
+  summary: gmdb_list_components_by_keyword
+  operationId: listComponentsByKeyword
+  description: >
+    List growth media components with the given keyword
+  tags:
+    - List Stanza
+  parameters:
+    - in: query
+      name: keyword
+      required: true
+      schema:
+        type: string
+      description: Keyword to search for
+    - in: query
+      name: limit
+      schema:
+        type: integer
+      description: Maximum number of results to return
+    - in: query
+      name: offset
+      schema:
+        type: integer
+      description: Number of results to skip
+  responses:
+    200:
+      description: SUCCESS
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              total:
+                type: integer
+              limit:
+                type: integer
+              offset:
+                type: integer
+              contents:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    gmo_id:
+                      type: object
+                      properties:
+                        label:
+                          type: string
+                        href:
+                          type: string
+                    name:
+                      type: string
+    400:
+      description: Invalid request

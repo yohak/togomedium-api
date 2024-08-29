@@ -1,0 +1,62 @@
+get:
+  summary: gmdb_list_components_by_gmoids
+  operationId: getListComponentsByGmoIds
+  description: >
+    List growth media components with the given GMO IDs
+  tags:
+    - List Stanza
+  parameters:
+    - name: gmo_ids
+      in: query
+      schema:
+        type: string
+      description: Comma-separated GMO IDs. If omitted, all components are returned
+    - name: limit
+      in: query
+      schema:
+        type: integer
+      description: Maximum number of results to return
+    - name: offset
+      in: query
+      schema:
+        type: integer
+      description: Number of results to skip before returning
+  responses:
+    200:
+      description: SUCCESS
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              total:
+                type: integer
+              offset:
+                type: integer
+              limit:
+                type: integer
+              contents:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    gmo_id:
+                      type: object
+                      properties:
+                        label:
+                          type: string
+                        href:
+                          type: string
+                    name:
+                      type: string
+              columns:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    key:
+                      type: string
+                    label:
+                      type: string
+    400:
+      description: Invalid request

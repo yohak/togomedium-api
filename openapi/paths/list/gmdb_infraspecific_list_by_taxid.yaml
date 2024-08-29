@@ -1,0 +1,49 @@
+get:
+  deprecated: true
+  summary: gmdb_infraspecific_list_by_taxid
+  operationId: GetInfraspecificListByTaxid
+  description: >
+    listing up organisms of taxonomy
+  tags:
+    - List Stanza
+  responses:
+    200:
+      description: List Stanza
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              total:
+                type: integer
+              offset:
+                type: integer
+              limit:
+                type: integer
+              contents:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: object
+                      properties:
+                        label:
+                          type: string
+                        href:
+                          type: string
+                    rank:
+                      type: string
+                    name:
+                      type: string
+              columns:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    key:
+                      type: string
+                    label:
+                      type: string
+    400:
+      description: Bad Request
