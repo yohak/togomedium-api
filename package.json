@@ -3,12 +3,15 @@
   "version": "0.1.1",
   "description": "",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "start": "redocly preview-docs",
+    "bundle": "redocly lint & redocly bundle --output public/bundle.yaml",
+    "build": "redocly lint & redocly build-docs --output public/index.html",
+    "test": "redocly lint"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
-  },
-  "devDependencies": {
-
+    "@redocly/cli": "^1.21.1"
   }
 }
