@@ -1,9 +1,0 @@
-get:
-  summary: gms_kegg_code_tid
-  description: >
-    Alignmentページで使用
-  tags:
-    - Stanza
-  responses:
-    200:
-      description: SUCCESS

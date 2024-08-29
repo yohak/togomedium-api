@@ -1,9 +1,0 @@
-get:
-  summary: list_media
-  description: >
-    培地一覧をリストアップする
-  tags:
-    - List Stanza
-  responses:
-    200:
-      description: SUCCESS

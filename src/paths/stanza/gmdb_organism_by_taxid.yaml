@@ -1,9 +1,0 @@
-get:
-  summary: gmdb_organism_by_taxid
-  description: >
-    生物の詳細を返す
-  tags:
-    - Stanza
-  responses:
-    200:
-      description: SUCCESS

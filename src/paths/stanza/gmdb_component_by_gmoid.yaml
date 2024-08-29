@@ -1,9 +1,0 @@
-get:
-  summary: gmdb_component_by_gmoid
-  description: >
-    コンポーネント詳細ページで使用
-  tags:
-    - Stanza
-  responses:
-    200:
-      description: SUCCESS
