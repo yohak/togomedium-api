@@ -3,9 +3,9 @@ get:
   summary: gmdb_list_media
   operationId: listMedia
   description: >
-    `list_media` と機能被り？サイト上では不使用
+    This endpoint is deprecated. Use `/list_media` instead.
   tags:
-    - List Stanza
+    - Deprecated
   responses:
     200:
       description: Unknown

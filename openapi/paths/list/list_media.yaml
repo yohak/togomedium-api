@@ -1,0 +1,37 @@
+get:
+  summary: list_media
+  operationId: _listMedia
+  description: >
+    list all growth media
+  tags:
+    - List Stanza
+  parameters:
+    - $ref: "../../components/parameters/list-limit.yaml"
+    - $ref: "../../components/parameters/list-offset.yaml"
+  responses:
+    200:
+      description: SUCCESS
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              contents:
+                items:
+                  properties:
+                    media_id:
+                      $ref: "../../components/schemas/list-response/link-obj.yaml"
+                    original_media_id:
+                      type: string
+                    media_name:
+                      type: string
+              total:
+                $ref: "../../components/schemas/list-response/total.yaml"
+              offset:
+                $ref: "../../components/schemas/list-response/offset.yaml"
+              limit:
+                $ref: "../../components/schemas/list-response/limit.yaml"
+              columns:
+                $ref: "../../components/schemas/list-response/columns.yaml"
+    400:
+      $ref: "../../components/responses/400.yaml"

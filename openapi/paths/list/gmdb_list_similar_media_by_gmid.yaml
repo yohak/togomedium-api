@@ -1,0 +1,43 @@
+get:
+  summary: gmdb_list_similar_media_by_gmid
+  operationId: getListSimilarMediaByGmId
+  description: >
+    Get similar growth media by GM ID
+  tags:
+    - List Stanza
+  parameters:
+    - name: gm_id
+      in: query
+      schema:
+        type: string
+      required: true
+    - $ref: "../../components/parameters/list-limit.yaml"
+    - $ref: "../../components/parameters/list-offset.yaml"
+  responses:
+    200:
+      description: SUCCESS
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              contents:
+                items:
+                  properties:
+                    gm_id:
+                      $ref: "../../components/schemas/list-response/link-obj.yaml"
+                    name:
+                      type: string
+                    score:
+                      type: number
+              total:
+                $ref: "../../components/schemas/list-response/total.yaml"
+              offset:
+                $ref: "../../components/schemas/list-response/offset.yaml"
+              limit:
+                $ref: "../../components/schemas/list-response/limit.yaml"
+              columns:
+                $ref: "../../components/schemas/list-response/columns.yaml"
+
+    400:
+      $ref: "../../components/responses/400.yaml"

@@ -1,0 +1,42 @@
+get:
+  summary: gmdb_media_by_taxid
+  operationId: mediaByTaxid
+  description: >
+    Get growth media by NCBI's tax ID
+  tags:
+    - List Stanza
+  parameters:
+    - name: tax_id
+      in: query
+      schema:
+        type: string
+      description: NCBI's tax ID
+    - $ref: "../../components/parameters/list-limit.yaml"
+    - $ref: "../../components/parameters/list-offset.yaml"
+  responses:
+    200:
+      description: SUCCESS
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              contents:
+                items:
+                  properties:
+                    media_id:
+                      $ref: "../../components/schemas/list-response/link-obj.yaml"
+                    original_media_id:
+                      type: string
+                    media_name:
+                      type: string
+              total:
+                $ref: "../../components/schemas/list-response/total.yaml"
+              offset:
+                $ref: "../../components/schemas/list-response/offset.yaml"
+              limit:
+                $ref: "../../components/schemas/list-response/limit.yaml"
+              columns:
+                $ref: "../../components/schemas/list-response/columns.yaml"
+    400:
+      $ref: "../../components/responses/400.yaml"

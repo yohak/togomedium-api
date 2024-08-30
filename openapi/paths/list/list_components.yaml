@@ -1,0 +1,36 @@
+get:
+  summary: list_components
+  operationId: listComponents
+  description: >
+    List all components
+  tags:
+    - List Stanza
+  parameters:
+    - $ref: "../../components/parameters/list-limit.yaml"
+    - $ref: "../../components/parameters/list-offset.yaml"
+  responses:
+    200:
+      description: SUCCESS
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              contents:
+                items:
+                  properties:
+                    gmo_id:
+                      $ref: "../../components/schemas/list-response/link-obj.yaml"
+                    name:
+                      type: string
+              total:
+                $ref: "../../components/schemas/list-response/total.yaml"
+              offset:
+                $ref: "../../components/schemas/list-response/offset.yaml"
+              limit:
+                $ref: "../../components/schemas/list-response/limit.yaml"
+              columns:
+                $ref: "../../components/schemas/list-response/columns.yaml"
+
+    400:
+      $ref: "../../components/responses/400.yaml"

@@ -1,0 +1,35 @@
+get:
+  summary: gmdb_stat_phylum_gm
+  operationId: statPhylumGm
+  description: >
+    Statistics number of gm by phylum
+  tags:
+    - List Stanza
+  parameters:
+    - $ref: "../../components/parameters/list-limit.yaml"
+    - $ref: "../../components/parameters/list-offset.yaml"
+  responses:
+    200:
+      description: SUCCESS
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              contents:
+                items:
+                  properties:
+                    phylum:
+                      $ref: "../../components/schemas/list-response/link-obj.yaml"
+                    gms:
+                      type: string
+              total:
+                $ref: "../../components/schemas/list-response/total.yaml"
+              offset:
+                $ref: "../../components/schemas/list-response/offset.yaml"
+              limit:
+                $ref: "../../components/schemas/list-response/limit.yaml"
+              columns:
+                $ref: "../../components/schemas/list-response/columns.yaml"
+    400:
+      $ref: "../../components/responses/400.yaml"

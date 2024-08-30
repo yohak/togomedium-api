@@ -1,0 +1,43 @@
+get:
+  summary: gmdb_list_organisms_by_keyword
+  operationId: listOrganismsByKeyword
+  description: >
+    List organisms with the given keyword
+  tags:
+    - List Stanza
+  parameters:
+    - in: query
+      name: keyword
+      required: true
+      schema:
+        type: string
+      description: Keyword to search for
+    - $ref: "../../components/parameters/list-limit.yaml"
+    - $ref: "../../components/parameters/list-offset.yaml"
+  responses:
+    200:
+      description: SUCCESS
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              contents:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    tax_id:
+                      $ref: "../../components/schemas/list-response/link-obj.yaml"
+                    label:
+                      type: string
+              total:
+                $ref: "../../components/schemas/list-response/total.yaml"
+              offset:
+                $ref: "../../components/schemas/list-response/offset.yaml"
+              limit:
+                $ref: "../../components/schemas/list-response/limit.yaml"
+              columns:
+                $ref: "../../components/schemas/list-response/columns.yaml"
+    400:
+      $ref: "../../components/responses/400.yaml"

@@ -14,10 +14,13 @@ security:
 tags:
   - name: List Stanza
     description: "Example echo operations."
+  - name: Deprecated
+    description: "These endpoints have been deprecated."
 x-tagGroups:
   - name: General
     tags:
       - List Stanza
+      - Deprecated
 servers:
   - url: https://togomedium.org/sparqlist/api
     description: "TogoMedium SPARQList API server"
@@ -32,3 +35,25 @@ paths:
     $ref: "paths/list/gmdb_list_media.yaml"
   /gmdb_list_media_by_gmids:
     $ref: "paths/list/gmdb_list_media_by_gmids.yaml"
+  /gmdb_list_media_by_keyword:
+    $ref: "paths/list/gmdb_list_media_by_keyword.yaml"
+  /gmdb_list_organisms_by_keyword:
+    $ref: "paths/list/gmdb_list_organisms_by_keyword.yaml"
+  /gmdb_list_organisms_by_taxids:
+    $ref: "paths/list/gmdb_list_organisms_by_taxids.yaml"
+  /gmdb_list_similar_media_by_gmid:
+    $ref: "paths/list/gmdb_list_similar_media_by_gmid.yaml"
+  /gmdb_media_by_gmoid:
+    $ref: "paths/list/gmdb_media_by_gmoid.yaml"
+  /gmdb_media_by_taxid:
+    $ref: "paths/list/gmdb_media_by_taxid.yaml"
+  /gmdb_organisms_by_gmid:
+    $ref: "paths/list/gmdb_organisms_by_gmid.yaml"
+  /gmdb_stat_phylum_gm:
+    $ref: "paths/list/gmdb_stat_phylum_gm.yaml"
+  /list_components:
+    $ref: "paths/list/list_components.yaml"
+  /list_media:
+    $ref: "paths/list/list_media.yaml"
+  /list_organisms:
+    $ref: "paths/list/list_organisms.yaml"
