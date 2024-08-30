@@ -1,0 +1,13 @@
+get:
+  deprecated: true
+  summary: gmdb_list_media
+  operationId: listMedia
+  description: >
+    `list_media` と機能被り？サイト上では不使用
+  tags:
+    - List Stanza
+  responses:
+    200:
+      description: Unknown
+    400:
+      $ref: "../../components/responses/400.yaml"

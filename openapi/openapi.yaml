@@ -5,7 +5,7 @@ info:
   contact:
     url: https://togomedium.org
   x-logo:
-    url: 'https://redocly.github.io/openapi-template/logo.png'
+    url: "https://redocly.github.io/openapi-template/logo.png"
     altText: OpenAPI example logo
   description: >
     TODO: write description
@@ -28,3 +28,7 @@ paths:
     $ref: "paths/list/gmdb_list_components_by_gmoids.yaml"
   /gmdb_list_components_by_keyword:
     $ref: "paths/list/gmdb_list_components_by_keyword.yaml"
+  /gmdb_list_media:
+    $ref: "paths/list/gmdb_list_media.yaml"
+  /gmdb_list_media_by_gmids:
+    $ref: "paths/list/gmdb_list_media_by_gmids.yaml"

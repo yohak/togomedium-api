@@ -1,19 +1,19 @@
 get:
-  summary: gmdb_list_components_by_keyword
-  operationId: listComponentsByKeyword
+  summary: gmdb_list_media_by_gmids
+  operationId: listMediaByGmids
   description: >
-    List growth media components with the given keyword
+    List growth media with the given GMIDs
   tags:
     - List Stanza
   parameters:
-    - in: query
-      name: keyword
-      required: true
+    - name: gm_ids
+      in: query
       schema:
         type: string
-      description: Keyword to search for
+      description: Comma-separated GMIDs
     - $ref: "../../components/parameters/list-limit.yaml"
     - $ref: "../../components/parameters/list-offset.yaml"
+
   responses:
     200:
       description: SUCCESS
@@ -23,13 +23,13 @@ get:
             type: object
             properties:
               contents:
-                type: array
                 items:
-                  type: object
                   properties:
-                    gmo_id:
+                    media_id:
                       $ref: "../../components/schemas/list-response/link-obj.yaml"
-                    name:
+                    original_media_id:
+                      type: string
+                    media_name:
                       type: string
               total:
                 $ref: "../../components/schemas/list-response/total.yaml"

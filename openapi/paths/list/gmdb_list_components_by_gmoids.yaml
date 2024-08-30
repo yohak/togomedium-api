@@ -10,17 +10,10 @@ get:
       in: query
       schema:
         type: string
-      description: Comma-separated GMO IDs. If omitted, all components are returned
-    - name: limit
-      in: query
-      schema:
-        type: integer
-      description: Maximum number of results to return
-    - name: offset
-      in: query
-      schema:
-        type: integer
-      description: Number of results to skip before returning
+      description: Comma-separated GMO IDs.
+      required: true
+    - $ref: "../../components/parameters/list-limit.yaml"
+    - $ref: "../../components/parameters/list-offset.yaml"
   responses:
     200:
       description: SUCCESS
@@ -29,34 +22,21 @@ get:
           schema:
             type: object
             properties:
-              total:
-                type: integer
-              offset:
-                type: integer
-              limit:
-                type: integer
               contents:
-                type: array
                 items:
-                  type: object
                   properties:
                     gmo_id:
-                      type: object
-                      properties:
-                        label:
-                          type: string
-                        href:
-                          type: string
+                      $ref: "../../components/schemas/list-response/link-obj.yaml"
                     name:
                       type: string
+              total:
+                $ref: "../../components/schemas/list-response/total.yaml"
+              offset:
+                $ref: "../../components/schemas/list-response/offset.yaml"
+              limit:
+                $ref: "../../components/schemas/list-response/limit.yaml"
               columns:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    key:
-                      type: string
-                    label:
-                      type: string
+                $ref: "../../components/schemas/list-response/columns.yaml"
+
     400:
-      description: Invalid request
+      $ref: "../../components/responses/400.yaml"

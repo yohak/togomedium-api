@@ -12,6 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@redocly/cli": "^1.21.1"
+    "@redocly/cli": "^1.22.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
   }
 }
