@@ -1,0 +1,27 @@
+{
+  "total": 4,
+  "offset": 0,
+  "limit": 10,
+  "contents": [
+    {
+      "tax_id": "28890",
+      "name": "Euryarchaeota",
+      "rank": "Phylum"
+    },
+    {
+      "tax_id": "28889",
+      "name": "Crenarchaeota",
+      "rank": "Phylum"
+    },
+    {
+      "tax_id": "651137",
+      "name": "Thaumarchaeota",
+      "rank": "Phylum"
+    },
+    {
+      "tax_id": "192989",
+      "name": "Nanoarchaeota",
+      "rank": "Phylum"
+    }
+  ]
+}

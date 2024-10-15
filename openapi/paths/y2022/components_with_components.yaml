@@ -1,0 +1,33 @@
+get:
+  summary: gmdb_components_with_components
+  operationId: componentsWithComponents
+  tags:
+    - Media Finder
+    - Y2022
+  description: >
+    Find media with the given components, then return all components in the media
+  parameters:
+    - name: gmo_ids
+      in: query
+      schema:
+        type: string
+      description: >
+        comma-separated gmo_ids. If omitted, return all components
+  responses:
+    200:
+      description: SUCCESS
+      content:
+        application/json:
+          example:
+            $ref: "../../examples/all-components.json"
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                gmo_id:
+                  type: string
+                name:
+                  type: string
+    400:
+      $ref: "../../components/responses/400.yaml"

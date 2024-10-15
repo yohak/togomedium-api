@@ -1,0 +1,52 @@
+get:
+  summary: gmdb_media_by_taxon
+  operationId: mediaByTaxon
+  tags:
+    - Media Finder
+    - Y2021
+    - List Stanza
+  description: >
+    Search for media associated with a taxon and return a list
+  parameters:
+    - name: tax_ids
+      in: query
+      required: true
+      schema:
+        type: string
+      description: >
+        comma-separated tax_id
+      example: aa,aaa
+    - $ref: "../../components/parameters/list-limit.yaml"
+    - $ref: "../../components/parameters/list-offset.yaml"
+
+  responses:
+    200:
+      description: SUCCESS
+      content:
+        application/json:
+          example:
+            $ref: "../../examples/media-list.json"
+          schema:
+            type: object
+            properties:
+              contents:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    gm_id:
+                      type: string
+                    name:
+                      type: string
+                    exact_match:
+                      type: boolean
+              total:
+                $ref: "../../components/schemas/list-response/total.yaml"
+              offset:
+                $ref: "../../components/schemas/list-response/offset.yaml"
+              limit:
+                $ref: "../../components/schemas/list-response/limit.yaml"
+              columns:
+                $ref: "../../components/schemas/list-response/columns.yaml"
+    400:
+      $ref: "../../components/responses/400.yaml"

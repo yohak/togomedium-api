@@ -1,0 +1,12 @@
+get:
+  summary: gmdb_component_by_gmoid
+  operationId: componentByGmoid
+  description: >
+    コンポーネント詳細ページで使用
+  tags:
+    - Stanza
+  responses:
+    200:
+      description: SUCCESS
+    400:
+      $ref: "../../components/responses/400.yaml"

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "redocly preview-docs",
-    "bundle": "redocly lint & redocly bundle --ext json --output public/bundle.json",
+    "bundle": "redocly lint & redocly bundle --ext json --output public/togomedium-api.json",
     "build": "redocly lint & redocly build-docs --output public/index.html",
     "test": "redocly lint"
   },

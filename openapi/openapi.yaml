@@ -4,27 +4,45 @@ info:
   title: TogoMedium API
   contact:
     url: https://togomedium.org
-  x-logo:
-    url: "https://redocly.github.io/openapi-template/logo.png"
-    altText: OpenAPI example logo
   description: >
     TODO: write description
 security:
   - {}
 tags:
+  - name: Y2022
+    description: "2022年度のAPI"
+  - name: Y2021
+    description: "2021年度のAPI"
   - name: List Stanza
     description: "Example echo operations."
   - name: Deprecated
     description: "These endpoints have been deprecated."
-x-tagGroups:
-  - name: General
-    tags:
-      - List Stanza
-      - Deprecated
 servers:
   - url: https://togomedium.org/sparqlist/api
     description: "TogoMedium SPARQList API server"
 paths:
+  /gmdb_components_with_components:
+    $ref: "paths/y2022/components_with_components.yaml"
+  /gmdb_gmdb_media_organisms_alignment_by_gm_ids:
+    $ref: "paths/y2022/media_strains_alignment_table.yaml"
+  /gmdb_media_by_taxon:
+    $ref: "paths/y2021/media_by_taxon.yaml"
+
+  /gmdb_component_by_gmoid:
+    $ref: "paths/stanza/gmdb_component_by_gmoid.yaml"
+  /gmdb_medium_by_gmid:
+    $ref: "paths/stanza/gmdb_medium_by_gmid.yaml"
+  /gmdb_organism_by_taxid:
+    $ref: "paths/stanza/gmdb_organism_by_taxid.yaml"
+  /gmdb_taxonomic_rank_by_taxid:
+    $ref: "paths/stanza/gmdb_taxonomic_rank_by_taxid.yaml"
+  /gms_by_kegg_tids_3:
+    $ref: "paths/stanza/gms_by_kegg_tids_3.yaml"
+  /gms_kegg_code_tid:
+    $ref: "paths/stanza/gms_kegg_code_tid.yaml"
+  /list_taxons_by_rank:
+    $ref: "paths/stanza/list_taxons_by_rank.yaml"
+
   /gmdb_infraspecific_list_by_taxid:
     $ref: "paths/list/gmdb_infraspecific_list_by_taxid.yaml"
   /gmdb_list_components_by_gmoids:

@@ -1,0 +1,12 @@
+get:
+  summary: gmdb_medium_by_gmid
+  operationId: mediumByGmid
+  description: >
+    培地の詳細を返す
+  tags:
+    - Stanza
+  responses:
+    200:
+      description: SUCCESS
+    400:
+      $ref: "../../components/responses/400.yaml"

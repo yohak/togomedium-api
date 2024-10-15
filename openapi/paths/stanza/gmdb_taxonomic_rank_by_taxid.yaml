@@ -1,0 +1,12 @@
+get:
+  summary: gmdb_taxonomic_rank_by_taxid
+  operationId: taxonomicRankByTaxid
+  description: >
+    タクソンの詳細を返す
+  tags:
+    - Stanza
+  responses:
+    200:
+      description: SUCCESS
+    400:
+      $ref: "../../components/responses/400.yaml"

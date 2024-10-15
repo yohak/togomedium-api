@@ -1,0 +1,15 @@
+{
+  "total": 2,
+  "offset": 0,
+  "limit": 10,
+  "contents": [
+    {
+      "gm_id": "HM_D00001a",
+      "name": "REACTIVATION WITH LIQUID MEDIUM 1"
+    },
+    {
+      "gm_id": "HM_D00065",
+      "name": "GYM STREPTOMYCES MEDIUM"
+    }
+  ]
+}

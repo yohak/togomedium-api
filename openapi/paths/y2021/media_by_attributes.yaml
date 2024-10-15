@@ -1,0 +1,52 @@
+get:
+  summary: gmdb_media_by_attributes
+  tags:
+    - Media Finder
+    - Y2021
+  description: 培地の属性に基づいて検索を行う
+  parameters:
+    - name: gmo_ids
+      in: query
+      required: true
+      schema:
+        type: string
+      description: コンマ区切りでのgmo_id
+      example: aa,aaa
+    - name: limit
+      in: query
+      schema:
+        type: number
+      description: ペジネーション 表示件数
+    - name: offset
+      in: query
+      schema:
+        type: number
+      description: ペジネーション オフセット
+
+  responses:
+    200:
+      description: SUCCESS
+      content:
+        application/json:
+          example:
+            $ref: "../../examples/media-list.json"
+          schema:
+            type: object
+            properties:
+              total:
+                type: number
+              offset:
+                type: number
+              limit:
+                type: number
+              contents:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    gm_id:
+                      type: string
+                    name:
+                      type: string
+                    exact_match:
+                      type: boolean
