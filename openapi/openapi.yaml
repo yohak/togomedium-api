@@ -45,9 +45,9 @@ paths:
   /gmdb_taxonomic_rank_by_taxid:
     $ref: "paths/stanza/gmdb_taxonomic_rank_by_taxid.yaml"
   /gms_by_kegg_tids_3:
-    $ref: "paths/stanza/gms_by_kegg_tids_3.yaml"
+    $ref: "paths/gms_by_kegg_tids_3.yaml"
   /gms_kegg_code_tid:
-    $ref: "paths/stanza/gms_kegg_code_tid.yaml"
+    $ref: "paths/gms_kegg_code_tid.yaml"
 
   /gmdb_list_components_by_gmoids:
     $ref: "paths/list_components_by_gmoids.yaml"

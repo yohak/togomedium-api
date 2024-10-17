@@ -2,11 +2,11 @@ get:
   summary: gms_kegg_code_tid
   operationId: gmsKeggCodeTid
   description: >
-    Alignmentページで使用
+    Mostly used at the alignment page.
   tags:
     - Stanza
   responses:
     200:
       description: SUCCESS
     400:
-      $ref: "../../components/responses/400.yaml"
+      $ref: "../components/responses/400.yaml"

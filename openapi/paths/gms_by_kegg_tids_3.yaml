@@ -2,11 +2,11 @@ get:
   summary: gms_by_kegg_tids_3
   operationId: gmsByKeggTids3
   description: >
-    Alignmentページで使用
+    Mostly used at the Alignment page.
   tags:
     - Stanza
   responses:
     200:
       description: SUCCESS
     400:
-      $ref: "../../components/responses/400.yaml"
+      $ref: "../components/responses/400.yaml"
