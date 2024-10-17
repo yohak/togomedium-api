@@ -6,7 +6,7 @@
   "scripts": {
     "start": "redocly preview-docs",
     "bundle": "redocly lint & redocly bundle --ext json --output public/togomedium-api.json",
-    "build": "redocly lint & redocly build-docs --output public/index.html",
+    "build": "redocly lint & redocly build-docs --output public/index.html & redocly bundle --ext json --output public/togomedium-api.json",
     "test": "redocly lint"
   },
   "author": "",
