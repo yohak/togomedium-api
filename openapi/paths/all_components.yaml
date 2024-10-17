@@ -1,16 +1,17 @@
 get:
   summary: gmdb_all_components
+  operationId: allComponents
   tags:
     - Media Finder
-    - Y2021
-  description: すべての成分を返す
+  description: >
+    This endpoint returns a list of all components in the GMDB.
   responses:
     200:
       description: SUCCESS
       content:
         application/json:
           example:
-            $ref: "../../examples/all-components.json"
+            $ref: "../examples/all-components.json"
           schema:
             type: array
             items:
@@ -20,3 +21,5 @@ get:
                   type: string
                 name:
                   type: string
+    400:
+      $ref: "../components/responses/400.yaml"
