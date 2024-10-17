@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "redocly preview-docs",
-    "bundle": "redocly lint & redocly bundle --ext json --output public/togomedium-api.json",
-    "build": "redocly lint & redocly build-docs --output public/index.html & redocly bundle --ext json --output public/togomedium-api.json",
+    "bundle": "redocly lint & redocly bundle --ext json --output /Volumes/DATA/repositories/togomedium-web/src/assets/data/togomedium-api.json",
+    "build": "redocly lint & redocly build-docs --output public/index.html & redocly bundle --ext yaml --output public/togomedium-api.yaml",
     "test": "redocly lint"
   },
   "author": "",
