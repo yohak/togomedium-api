@@ -1,0 +1,13 @@
+get:
+  deprecated: true
+  summary: list_taxons_by_rank
+  operationId: listTaxonsByRank
+  description: >
+    historically used at the top page for displaying the taxon hierarchy<br>
+  tags:
+    - Deprecated
+  responses:
+    200:
+      description: SUCCESS
+    400:
+      $ref: "../components/responses/400.yaml"

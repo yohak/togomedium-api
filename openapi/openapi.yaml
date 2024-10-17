@@ -48,8 +48,7 @@ paths:
     $ref: "paths/stanza/gms_by_kegg_tids_3.yaml"
   /gms_kegg_code_tid:
     $ref: "paths/stanza/gms_kegg_code_tid.yaml"
-  /list_taxons_by_rank:
-    $ref: "paths/stanza/list_taxons_by_rank.yaml"
+
   /gmdb_list_components_by_gmoids:
     $ref: "paths/list_components_by_gmoids.yaml"
   /gmdb_list_components_by_keyword:
@@ -84,3 +83,5 @@ paths:
     $ref: "paths/_list_media.yaml"
   /gmdb_infraspecific_list_by_taxid:
     $ref: "paths/infraspecific_list_by_taxid.yaml"
+  /list_taxons_by_rank:
+    $ref: "paths/list_taxons_by_rank.yaml"
