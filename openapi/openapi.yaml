@@ -30,6 +30,8 @@ paths:
     $ref: "paths/media_by_taxon.yaml"
   /gmdb_all_components:
     $ref: "paths/all_components.yaml"
+  /gmdb_organisms_by_phenotypes:
+    $ref: "paths/organisms_by_phenotypes.yaml"
 
   /gmdb_component_by_gmoid:
     $ref: "paths/stanza/gmdb_component_by_gmoid.yaml"

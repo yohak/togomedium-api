@@ -1,0 +1,99 @@
+get:
+  summary: gmdb_organisms_by_phenotypes
+  operationId: organismsByPhenotypes
+  tags:
+    - Media Finder
+    - List Stanza
+  description: >
+    Mostly used at "Find media by organism phenotype" page. <br>
+    Search organisms by various phenotypes
+  parameters:
+    - name: growth_temp
+      in: query
+      description: >
+        string of 2 numbers separated by comma to represent min and max
+      schema:
+        type: string
+        example: 0,110
+    - name: growth_ph
+      in: query
+      description: >
+        string of 2 numbers separated by comma to represent min and max
+      schema:
+        type: string
+        example: 0,14
+    - name: growth_salinity
+      in: query
+      description: >
+        string of 2 numbers separated by comma to represent min and max
+      schema:
+        type: string
+        example: 0,15
+    - name: MPO_10002
+      description: Single MPO id of Oxygen requirement
+      in: query
+      schema:
+        type: string
+        example: MPO_04002
+    - name: MPO_07001
+      description: Single MPO id of Gram Strain
+      in: query
+      schema:
+        type: string
+        example: MPO_07002
+    - name: MPO_02000
+      description: Single MPO id of Motility
+      in: query
+      schema:
+        type: string
+        example: MPO_02001
+    - name: MPO_01001
+      description: Single MPO id of Cell shape
+      in: query
+      schema:
+        type: string
+        example: MPO_01015
+    - name: MPO_03006
+      description: Single MPO id of Salinity
+      in: query
+      schema:
+        type: string
+        example: MPO_03007
+    - name: MPO_04053
+      description: Single MPO id of Carbon fixation
+      in: query
+      schema:
+        type: string
+        example: MPO_03007
+
+    - $ref: "../components/parameters/list-limit.yaml"
+    - $ref: "../components/parameters/list-offset.yaml"
+  responses:
+    200:
+      description: SUCCESS
+      content:
+        application/json:
+          example:
+            $ref: "../examples/organism-list.json"
+          schema:
+            type: object
+            properties:
+              contents:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    tax_id:
+                      type: string
+                    name:
+                      type: string
+              total:
+                $ref: "../components/schemas/list-response/total.yaml"
+              offset:
+                $ref: "../components/schemas/list-response/offset.yaml"
+              limit:
+                $ref: "../components/schemas/list-response/limit.yaml"
+              columns:
+                $ref: "../components/schemas/list-response/columns.yaml"
+    400:
+      $ref: "../components/responses/400.yaml"
