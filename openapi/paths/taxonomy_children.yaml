@@ -1,11 +1,12 @@
 get:
   summary: gmdb_taxonomy_children
+  operationId: taxonomyChildren
   tags:
     - Media Finder
-    - Y2021
   description: |
-    タクソノミーの子階層を取得する<br>
-    子要素が存在しない場合は `[]` を返す
+    Mostly used at "Find media by taxonomic tree" page.<br />
+    returns the direct children of the given taxonomy id<br />
+    if no children are found, returns an empty array `[]`
   parameters:
     - name: tax_id
       in: query
@@ -19,7 +20,7 @@ get:
       content:
         application/json:
           example:
-            $ref: "../../examples/taxon-list.json"
+            $ref: "../examples/taxon-list.json"
           schema:
             type: array
             items:
@@ -31,3 +32,5 @@ get:
                   type: string
                 rank:
                   type: string
+    400:
+      $ref: "../components/responses/400.yaml"

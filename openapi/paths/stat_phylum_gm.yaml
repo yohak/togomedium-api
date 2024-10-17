@@ -6,8 +6,8 @@ get:
   tags:
     - List Stanza
   parameters:
-    - $ref: "../../components/parameters/list-limit.yaml"
-    - $ref: "../../components/parameters/list-offset.yaml"
+    - $ref: "../components/parameters/list-limit.yaml"
+    - $ref: "../components/parameters/list-offset.yaml"
   responses:
     200:
       description: SUCCESS
@@ -20,16 +20,16 @@ get:
                 items:
                   properties:
                     phylum:
-                      $ref: "../../components/schemas/list-response/link-obj.yaml"
+                      $ref: "../components/schemas/list-response/link-obj.yaml"
                     gms:
                       type: string
               total:
-                $ref: "../../components/schemas/list-response/total.yaml"
+                $ref: "../components/schemas/list-response/total.yaml"
               offset:
-                $ref: "../../components/schemas/list-response/offset.yaml"
+                $ref: "../components/schemas/list-response/offset.yaml"
               limit:
-                $ref: "../../components/schemas/list-response/limit.yaml"
+                $ref: "../components/schemas/list-response/limit.yaml"
               columns:
-                $ref: "../../components/schemas/list-response/columns.yaml"
+                $ref: "../components/schemas/list-response/columns.yaml"
     400:
-      $ref: "../../components/responses/400.yaml"
+      $ref: "../components/responses/400.yaml"

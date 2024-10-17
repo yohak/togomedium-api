@@ -10,4 +10,4 @@ get:
     200:
       description: Unknown
     400:
-      $ref: "../../components/responses/400.yaml"
+      $ref: "../components/responses/400.yaml"

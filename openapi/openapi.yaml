@@ -6,15 +6,14 @@ info:
     url: https://togomedium.org
   description: >
     TODO: write description
-security:
-  - {}
+security: []
 tags:
-  - name: Y2022
-    description: "2022年度のAPI"
-  - name: Y2021
-    description: "2021年度のAPI"
   - name: List Stanza
-    description: "Example echo operations."
+    description: "These endpoints return a list of data which is used by TogoMedium's List Stanza."
+  - name: Stanza
+    description: "These endpoints return is used by TogoMedium's Stanza."
+  - name: Media Finder
+    description: "These endpoints are related to the media finder Stanzas"
   - name: Deprecated
     description: "These endpoints have been deprecated."
 servers:
@@ -22,11 +21,13 @@ servers:
     description: "TogoMedium SPARQList API server"
 paths:
   /gmdb_components_with_components:
-    $ref: "paths/y2022/components_with_components.yaml"
-  /gmdb_gmdb_media_organisms_alignment_by_gm_ids:
-    $ref: "paths/y2022/media_strains_alignment_table.yaml"
+    $ref: "paths/components_with_components.yaml"
+  /gmdb_taxonomy_children:
+    $ref: "paths/taxonomy_children.yaml"
+  /gmdb_media_strains_alignment_by_gm_ids:
+    $ref: "paths/media_strains_alignment_by_gm_ids.yaml"
   /gmdb_media_by_taxon:
-    $ref: "paths/y2021/media_by_taxon.yaml"
+    $ref: "paths/media_by_taxon.yaml"
 
   /gmdb_component_by_gmoid:
     $ref: "paths/stanza/gmdb_component_by_gmoid.yaml"
@@ -42,36 +43,37 @@ paths:
     $ref: "paths/stanza/gms_kegg_code_tid.yaml"
   /list_taxons_by_rank:
     $ref: "paths/stanza/list_taxons_by_rank.yaml"
-
-  /gmdb_infraspecific_list_by_taxid:
-    $ref: "paths/list/gmdb_infraspecific_list_by_taxid.yaml"
   /gmdb_list_components_by_gmoids:
-    $ref: "paths/list/gmdb_list_components_by_gmoids.yaml"
+    $ref: "paths/list_components_by_gmoids.yaml"
   /gmdb_list_components_by_keyword:
-    $ref: "paths/list/gmdb_list_components_by_keyword.yaml"
-  /gmdb_list_media:
-    $ref: "paths/list/gmdb_list_media.yaml"
+    $ref: "paths/list_components_by_keyword.yaml"
   /gmdb_list_media_by_gmids:
-    $ref: "paths/list/gmdb_list_media_by_gmids.yaml"
+    $ref: "paths/list_media_by_gmids.yaml"
   /gmdb_list_media_by_keyword:
-    $ref: "paths/list/gmdb_list_media_by_keyword.yaml"
+    $ref: "paths/list_media_by_keyword.yaml"
   /gmdb_list_organisms_by_keyword:
-    $ref: "paths/list/gmdb_list_organisms_by_keyword.yaml"
+    $ref: "paths/list_organisms_by_keyword.yaml"
   /gmdb_list_organisms_by_taxids:
-    $ref: "paths/list/gmdb_list_organisms_by_taxids.yaml"
+    $ref: "paths/list_organisms_by_taxids.yaml"
   /gmdb_list_similar_media_by_gmid:
-    $ref: "paths/list/gmdb_list_similar_media_by_gmid.yaml"
+    $ref: "paths/list_similar_media_by_gmid.yaml"
   /gmdb_media_by_gmoid:
-    $ref: "paths/list/gmdb_media_by_gmoid.yaml"
+    $ref: "paths/media_by_gmoid.yaml"
   /gmdb_media_by_taxid:
-    $ref: "paths/list/gmdb_media_by_taxid.yaml"
+    $ref: "paths/media_by_taxid.yaml"
   /gmdb_organisms_by_gmid:
-    $ref: "paths/list/gmdb_organisms_by_gmid.yaml"
+    $ref: "paths/organisms_by_gmid.yaml"
   /gmdb_stat_phylum_gm:
-    $ref: "paths/list/gmdb_stat_phylum_gm.yaml"
+    $ref: "paths/stat_phylum_gm.yaml"
   /list_components:
-    $ref: "paths/list/list_components.yaml"
+    $ref: "paths/list_components.yaml"
   /list_media:
-    $ref: "paths/list/list_media.yaml"
+    $ref: "paths/list_media.yaml"
   /list_organisms:
-    $ref: "paths/list/list_organisms.yaml"
+    $ref: "paths/list_organisms.yaml"
+
+  #deprecated
+  /gmdb_list_media:
+    $ref: "paths/_list_media.yaml"
+  /gmdb_infraspecific_list_by_taxid:
+    $ref: "paths/infraspecific_list_by_taxid.yaml"

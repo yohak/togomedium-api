@@ -46,4 +46,4 @@ get:
                     label:
                       type: string
     400:
-      $ref: "../../components/responses/400.yaml"
+      $ref: "../components/responses/400.yaml"

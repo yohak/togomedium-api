@@ -3,7 +3,6 @@ get:
   operationId: mediaByTaxon
   tags:
     - Media Finder
-    - Y2021
     - List Stanza
   description: >
     Search for media associated with a taxon and return a list
@@ -16,8 +15,8 @@ get:
       description: >
         comma-separated tax_id
       example: aa,aaa
-    - $ref: "../../components/parameters/list-limit.yaml"
-    - $ref: "../../components/parameters/list-offset.yaml"
+    - $ref: "../components/parameters/list-limit.yaml"
+    - $ref: "../components/parameters/list-offset.yaml"
 
   responses:
     200:
@@ -25,7 +24,7 @@ get:
       content:
         application/json:
           example:
-            $ref: "../../examples/media-list.json"
+            $ref: "../examples/media-list.json"
           schema:
             type: object
             properties:
@@ -41,12 +40,12 @@ get:
                     exact_match:
                       type: boolean
               total:
-                $ref: "../../components/schemas/list-response/total.yaml"
+                $ref: "../components/schemas/list-response/total.yaml"
               offset:
-                $ref: "../../components/schemas/list-response/offset.yaml"
+                $ref: "../components/schemas/list-response/offset.yaml"
               limit:
-                $ref: "../../components/schemas/list-response/limit.yaml"
+                $ref: "../components/schemas/list-response/limit.yaml"
               columns:
-                $ref: "../../components/schemas/list-response/columns.yaml"
+                $ref: "../components/schemas/list-response/columns.yaml"
     400:
-      $ref: "../../components/responses/400.yaml"
+      $ref: "../components/responses/400.yaml"

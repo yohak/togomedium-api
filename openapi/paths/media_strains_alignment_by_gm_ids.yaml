@@ -3,8 +3,8 @@ get:
   operationId: mediaStrainsAlignmentByGmIds
   tags:
     - Stanza
-    - Y2022
   description: >
+    Mostly used at the media detail page. <br />
     find multiple media by gm_id and return alignment information of organisms
   parameters:
     - name: gm_ids
@@ -37,20 +37,20 @@ get:
                     type: object
                     properties:
                       superkingdom:
-                        $ref: "../../components/schemas/simple-taxon.yaml"
+                        $ref: "../components/schemas/simple-taxon.yaml"
                       phylum:
-                        $ref: "../../components/schemas/simple-taxon.yaml"
+                        $ref: "../components/schemas/simple-taxon.yaml"
                       class:
-                        $ref: "../../components/schemas/simple-taxon.yaml"
+                        $ref: "../components/schemas/simple-taxon.yaml"
                       order:
-                        $ref: "../../components/schemas/simple-taxon.yaml"
+                        $ref: "../components/schemas/simple-taxon.yaml"
                       family:
-                        $ref: "../../components/schemas/simple-taxon.yaml"
+                        $ref: "../components/schemas/simple-taxon.yaml"
                       genus:
-                        $ref: "../../components/schemas/simple-taxon.yaml"
+                        $ref: "../components/schemas/simple-taxon.yaml"
                       species:
-                        $ref: "../../components/schemas/simple-taxon.yaml"
+                        $ref: "../components/schemas/simple-taxon.yaml"
                       strain:
-                        $ref: "../../components/schemas/simple-taxon.yaml"
+                        $ref: "../components/schemas/simple-taxon.yaml"
     400:
-      $ref: "../../components/responses/400.yaml"
+      $ref: "../components/responses/400.yaml"
