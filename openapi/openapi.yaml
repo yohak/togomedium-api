@@ -39,7 +39,7 @@ paths:
   /gmdb_media_alignment_by_gm_ids:
     $ref: "paths/media_alignment_table.yaml"
   /gmdb_component_by_gmoid:
-    $ref: "paths/stanza/gmdb_component_by_gmoid.yaml"
+    $ref: "paths/component_by_gmoid.yaml"
   /gmdb_medium_by_gmid:
     $ref: "paths/stanza/gmdb_medium_by_gmid.yaml"
   /gmdb_organism_by_taxid:

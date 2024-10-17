@@ -1,0 +1,65 @@
+{
+  "pref_label": "D-Glucose",
+  "id": "GMO_001010",
+  "label_ja": "D-グルコース",
+  "alt_labels_en": ["grape sugar", "Dextrose"],
+  "alt_labels_ja": ["ブドウ糖", "デキストロース"],
+  "super_classes": [
+    {
+      "gmo_id": "GMO_001815",
+      "uri": "http://purl.jp/bio/10/gmo/GMO_001815",
+      "label_en": "Glucose"
+    }
+  ],
+  "sub_classes": [
+    {
+      "gmo_id": "alpha-D-Glucose",
+      "uri": "http://purl.jp/bio/10/gmo/GMO_002477",
+      "label_en": "alpha-D-Glucose"
+    },
+    {
+      "gmo_id": "GMO_001826",
+      "uri": "http://purl.jp/bio/10/gmo/GMO_001826",
+      "label_en": "D-Glucose (anhydrous)"
+    },
+    {
+      "gmo_id": "GMO_002477",
+      "uri": "http://purl.jp/bio/10/gmo/GMO_002477",
+      "label_en": "alpha-D-Glucose"
+    }
+  ],
+  "properties": [
+    {
+      "gmo_id": "GMO_000046",
+      "uri": "http://purl.jp/bio/10/gmo/GMO_000046",
+      "label_en": "Defined component"
+    },
+    {
+      "gmo_id": "GMO_000049",
+      "uri": "http://purl.jp/bio/10/gmo/GMO_000049",
+      "label_en": "Simple component"
+    },
+    {
+      "gmo_id": "GMO_000041",
+      "uri": "http://purl.jp/bio/10/gmo/GMO_000041",
+      "label_en": "Organic compound"
+    }
+  ],
+  "roles": [
+    {
+      "gmo_id": "GMO_000063",
+      "uri": "http://purl.jp/bio/10/gmo/GMO_000063",
+      "label_en": "Carbon source"
+    }
+  ],
+  "links": [
+    "http://en.wikipedia.org/wiki/Glucose",
+    "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Glucose",
+    "http://purl.bioontology.org/ontology/NDFRT/N0000006402",
+    "http://purl.obolibrary.org/obo/CHEBI_17234",
+    "http://mediadive.dsmz.de/ingredients/211",
+    "http://mediadive.dsmz.de/ingredients/60",
+    "http://mediadive.dsmz.de/ingredients/94",
+    "http://pubchem.ncbi.nlm.nih.gov/compound/5793"
+  ]
+}
