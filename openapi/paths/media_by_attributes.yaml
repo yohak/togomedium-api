@@ -1,0 +1,55 @@
+get:
+  summary: gmdb_media_by_attributes
+  operationId: mediaByAttributes
+  tags:
+    - Media Finder
+    - List Stanza
+  description: >
+    Search media by attributes. <br />
+    Currently only component(gmo_id) is supported.<br />
+    Mostly used at "Find media by components" page.
+  parameters:
+    - name: gmo_ids
+      in: query
+      required: true
+      schema:
+        type: string
+      description: >
+        string of gmo_id(s) separated by comma.
+      example: aa,aaa
+    - $ref: "../components/parameters/list-limit.yaml"
+    - $ref: "../components/parameters/list-offset.yaml"
+
+  responses:
+    200:
+      description: SUCCESS
+      content:
+        application/json:
+          example:
+            $ref: "../examples/media-list.json"
+          schema:
+            type: object
+            properties:
+              contents:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    gm_id:
+                      type: string
+                    name:
+                      type: string
+                    original_media_id:
+                      type: string
+                    exact_match:
+                      type: boolean
+              total:
+                $ref: "../components/schemas/list-response/total.yaml"
+              offset:
+                $ref: "../components/schemas/list-response/offset.yaml"
+              limit:
+                $ref: "../components/schemas/list-response/limit.yaml"
+              columns:
+                $ref: "../components/schemas/list-response/columns.yaml"
+    400:
+      $ref: "../components/responses/400.yaml"

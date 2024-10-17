@@ -5,7 +5,7 @@ info:
   contact:
     url: https://togomedium.org
   description: >
-    TODO: write description
+    TogoMedium API is a RESTful API for TogoMedium, a database of growth media for microorganisms.
 security: []
 tags:
   - name: List Stanza
@@ -32,6 +32,8 @@ paths:
     $ref: "paths/all_components.yaml"
   /gmdb_organisms_by_phenotypes:
     $ref: "paths/organisms_by_phenotypes.yaml"
+  /gmdb_media_by_attributes:
+    $ref: "paths/media_by_attributes.yaml"
 
   /gmdb_component_by_gmoid:
     $ref: "paths/stanza/gmdb_component_by_gmoid.yaml"
