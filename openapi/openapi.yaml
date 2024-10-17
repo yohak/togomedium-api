@@ -43,7 +43,7 @@ paths:
   /gmdb_medium_by_gmid:
     $ref: "paths/stanza/gmdb_medium_by_gmid.yaml"
   /gmdb_organism_by_taxid:
-    $ref: "paths/stanza/gmdb_organism_by_taxid.yaml"
+    $ref: "paths/organism_by_taxid.yaml"
   /gmdb_taxonomic_rank_by_taxid:
     $ref: "paths/taxonomic_rank_by_taxid.yaml"
   /gms_by_kegg_tids_3:

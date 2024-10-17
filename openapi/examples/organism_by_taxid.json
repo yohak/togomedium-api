@@ -1,0 +1,101 @@
+{
+  "scientific_name": "Streptococcus gallolyticus",
+  "taxid": 315405,
+  "rank": "http://ddbj.nig.ac.jp/ontologies/taxonomy/Species",
+  "authority_name": "Streptococcus caprinus Brooker et al. 1996",
+  "lineage": [
+    {
+      "uri": "http://identifiers.org/taxonomy/2",
+      "taxid": 2,
+      "label": "Bacteria",
+      "rank": "superkingdom"
+    },
+    {
+      "uri": "http://identifiers.org/taxonomy/1239",
+      "taxid": 1239,
+      "label": "Firmicutes",
+      "rank": "phylum"
+    },
+    {
+      "uri": "http://identifiers.org/taxonomy/91061",
+      "taxid": 91061,
+      "label": "Bacilli",
+      "rank": "class"
+    },
+    {
+      "uri": "http://identifiers.org/taxonomy/186826",
+      "taxid": 186826,
+      "label": "Lactobacillales",
+      "rank": "order"
+    },
+    {
+      "uri": "http://identifiers.org/taxonomy/1300",
+      "taxid": 1300,
+      "label": "Streptococcaceae",
+      "rank": "family"
+    },
+    {
+      "uri": "http://identifiers.org/taxonomy/1301",
+      "taxid": 1301,
+      "label": "Streptococcus",
+      "rank": "genus"
+    },
+    {
+      "uri": "http://identifiers.org/taxonomy/315405",
+      "taxid": 315405,
+      "label": "Streptococcus gallolyticus",
+      "rank": "species"
+    }
+  ],
+  "type_material": [
+    {
+      "label": "ACM 3611"
+    },
+    {
+      "label": "CCUG 35224"
+    },
+    {
+      "label": "CIP 105428"
+    },
+    {
+      "label": "DSM 16831"
+    },
+    {
+      "label": "HDP 98035"
+    },
+    {
+      "label": "JCM 10005"
+    },
+    {
+      "label": "LMG 16802"
+    },
+    {
+      "label": "LMG:16802"
+    },
+    {
+      "label": "NCTC 13773"
+    }
+  ],
+  "other_type_material": [
+    {
+      "label": "ACM 3969",
+      "name": "Streptococcus caprinus"
+    },
+    {
+      "label": "ATCC 700065",
+      "name": "Streptococcus caprinus"
+    },
+    {
+      "label": "LMG 15572",
+      "name": "Streptococcus caprinus"
+    },
+    {
+      "label": "LMG:15572",
+      "name": "Streptococcus caprinus"
+    },
+    {
+      "label": "strain TPC 2.3",
+      "name": "Streptococcus caprinus"
+    }
+  ]
+}

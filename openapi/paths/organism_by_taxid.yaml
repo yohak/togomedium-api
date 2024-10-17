@@ -1,0 +1,79 @@
+get:
+  summary: gmdb_organism_by_taxid
+  operationId: organismByTaxid
+  description: >
+    returns the detailed information of an organism by its taxid
+  tags:
+    - Stanza
+    - Detail
+  parameters:
+    - name: tax_id
+      in: query
+      required: true
+      schema:
+        type: string
+      description: >
+      example: 315405
+  responses:
+    200:
+      description: SUCCESS
+      content:
+        application/json:
+          example:
+            $ref: "../examples/organism_by_taxid.json"
+          schema:
+            type: object
+            properties:
+              scientific_name:
+                type: string
+                example: Streptococcus gallolyticus
+              taxid:
+                type: integer
+                example: 315405
+              rank:
+                type: string
+                format: uri
+                example: http://ddbj.nig.ac.jp/ontologies/taxonomy/Species
+              authority_name:
+                type: string
+                example: Streptococcus caprinus Brooker et al. 1996
+              lineage:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    uri:
+                      type: string
+                      format: uri
+                      example: http://identifiers.org/taxonomy/2
+                    taxid:
+                      type: integer
+                      example: 2
+                    label:
+                      type: string
+                      example: Bacteria
+                    rank:
+                      type: string
+                      example: superkingdom
+              type_material:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    label:
+                      type: string
+                      example: ACM 3611
+              other_type_material:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    label:
+                      type: string
+                      example: ACM 3969
+                    name:
+                      type: string
+                      example: Streptococcus caprinus
+
+    400:
+      $ref: "../components/responses/400.yaml"
