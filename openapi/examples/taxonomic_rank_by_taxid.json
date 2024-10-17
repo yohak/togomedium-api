@@ -1,0 +1,44 @@
+{
+  "scientific_name": "Bacilli",
+  "taxid": "91061",
+  "rank": "http://ddbj.nig.ac.jp/ontologies/taxonomy/Class",
+  "authority_name": "Bacilli Ludwig et al. 2010",
+  "lineage": [
+    {
+      "rank": "superkingdom",
+      "label": "Bacteria",
+      "uri": "http://identifiers.org/taxonomy/2",
+      "taxid": "2"
+    },
+    {
+      "rank": "phylum",
+      "label": "Firmicutes",
+      "uri": "http://identifiers.org/taxonomy/1239",
+      "taxid": "1239"
+    },
+    {
+      "rank": "class",
+      "label": "NA",
+      "uri": "NA",
+      "taxid": "NA"
+    },
+    {
+      "rank": "order",
+      "label": "NA",
+      "uri": "NA",
+      "taxid": "NA"
+    },
+    {
+      "rank": "family",
+      "label": "NA",
+      "uri": "NA",
+      "taxid": "NA"
+    },
+    {
+      "rank": "genus",
+      "label": "NA",
+      "uri": "NA",
+      "taxid": "NA"
+    }
+  ]
+}

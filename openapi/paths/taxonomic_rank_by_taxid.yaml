@@ -1,0 +1,41 @@
+get:
+  summary: gmdb_taxonomic_rank_by_taxid
+  operationId: taxonomicRankByTaxid
+  description: >
+    returns detailed information of a taxonomic rank based on taxid.
+  tags:
+    - Stanza
+    - Detail
+  responses:
+    200:
+      description: SUCCESS
+      content:
+        application/json:
+          example:
+            $ref: "../examples/taxonomic_rank_by_taxid.json"
+          schema:
+            type: object
+            properties:
+              scientific_name:
+                type: string
+              taxid:
+                type: string
+              rank:
+                type: string
+              authority_name:
+                type: string
+              lineage:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    rank:
+                      type: string
+                    label:
+                      type: string
+                    uri:
+                      type: string
+                    taxid:
+                      type: string
+    400:
+      $ref: "../components/responses/400.yaml"

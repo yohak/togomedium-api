@@ -10,6 +10,8 @@ security: []
 tags:
   - name: List Stanza
     description: "These endpoints return a list of data which is used by TogoMedium's List Stanza."
+  - name: Detail
+    description: "These endpoints return detailed information."
   - name: Stanza
     description: "These endpoints return is used by TogoMedium's Stanza."
   - name: Media Finder
@@ -43,7 +45,7 @@ paths:
   /gmdb_organism_by_taxid:
     $ref: "paths/stanza/gmdb_organism_by_taxid.yaml"
   /gmdb_taxonomic_rank_by_taxid:
-    $ref: "paths/stanza/gmdb_taxonomic_rank_by_taxid.yaml"
+    $ref: "paths/taxonomic_rank_by_taxid.yaml"
   /gms_by_kegg_tids_3:
     $ref: "paths/gms_by_kegg_tids_3.yaml"
   /gms_kegg_code_tid:
