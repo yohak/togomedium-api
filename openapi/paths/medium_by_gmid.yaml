@@ -1,0 +1,116 @@
+get:
+  summary: gmdb_medium_by_gmid
+  operationId: mediumByGmid
+  description: >
+    returns the detailed information of a medium by its gmid
+  tags:
+    - Stanza
+    - Detail
+  parameters:
+    - name: gmid
+      in: query
+      required: true
+      schema:
+        type: string
+      description: >
+      example: M1470
+  responses:
+    200:
+      description: SUCCESS
+      content:
+        application/json:
+          example:
+            $ref: "../examples/medium_by_gmid.json"
+          schema:
+            type: object
+            properties:
+              meta:
+                type: object
+                properties:
+                  gm:
+                    type: string
+                    format: uri
+                    example: http://togomedium.org/medium/M1470
+                  name:
+                    type: string
+                    example: (Unnamed medium)
+                  original_media_id:
+                    type: string
+                    example: NBRC_M249
+                  src_url:
+                    type: string
+                    format: uri
+                    example: https://www.nite.go.jp/nbrc/catalogue/NBRCMediumDetailServlet?NO=249
+                  ph:
+                    type: string
+                    example: 6.5
+              components:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    paragraph_index:
+                      type: number
+                    subcomponent_name:
+                      type: string
+                    items:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          component_name:
+                            type: string
+                            example: Carbon source
+                          conc_unit:
+                            type: string
+                          conc_value:
+                            type: number
+                          reference_media_id:
+                            type: string
+                          volume:
+                            type: number
+                          unit:
+                            type: string
+                            example: g/L
+                          gmo:
+                            type: string
+                          gmo_id:
+                            type: string
+                          label:
+                            type: string
+                          properties:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                id:
+                                  type: string
+                                uri:
+                                  type: string
+                                label:
+                                  type: string
+                          roles:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                id:
+                                  type: string
+                                uri:
+                                  type: string
+                                label:
+                                  type: string
+              comments:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    paragraph_index:
+                      type: integer
+                      example: 2
+                    comment:
+                      type: string
+                      example: pH 6.5
+
+    400:
+      $ref: "../components/responses/400.yaml"
