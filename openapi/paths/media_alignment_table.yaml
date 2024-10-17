@@ -1,16 +1,19 @@
 get:
   summary: gmdb_media_alignment_by_gm_ids
+  operationId: mediaAlignmentTableByGmIds
   tags:
     - Stanza
-    - Y2021
-  description: gm_idをもとに複数の培地を検索し、成分のアライメント情報を返す
+  description: >
+    returns the alignment information of components based on gm_ids. <br />
+    mostly used at "Compare media" page.
   parameters:
     - name: gm_ids
       in: query
       required: true
       schema:
         type: string
-      description: コンマ区切りでの培地のid
+      description: >
+        single string of gm_ids separated by comma
       example: aa,aaa
 
   responses:
@@ -19,7 +22,7 @@ get:
       content:
         application/json:
           example:
-            $ref: "../../examples/media-alignment-table.json"
+            $ref: "../examples/media-alignment-table.json"
           schema:
             type: object
             properties:
@@ -36,12 +39,12 @@ get:
                       type: string
                     components:
                       type: array
-                      description: TAX IDのリスト
+                      description: list of tax ids
                       items:
                         type: string
                     organisms:
                       type: array
-                      description: GMO IDのリスト
+                      description: list of gmo ids
                       items:
                         type: string
               organisms:
@@ -63,8 +66,14 @@ get:
                     name:
                       type: string
                     parent:
-                      type: string
-                      description: 存在しない場合は `null` を入れる
-                    function:
-                      type: string
-                      description: 存在しない場合は `null` を入れる
+                      type:
+                        - string
+                        - "null"
+                    category:
+                      type:
+                        - string
+                        - "null"
+                    display_order:
+                      type: number
+    400:
+      $ref: "../components/responses/400.yaml"

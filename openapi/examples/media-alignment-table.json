@@ -1,97 +1,490 @@
 {
   "media": [
     {
-      "gm_id": "HM_D00001a",
-      "name": "REACTIVATION WITH LIQUID MEDIUM 1",
-      "components": ["GMO_001001", "GMO_001007", "GMO_001074", "GMO_000012"],
-      "organisms": ["384676", "643561"]
+      "gm_id": "M941",
+      "name": "M13a Medium",
+      "original_media_id": "JCM_M900",
+      "components": [
+        "GMO_001053",
+        "GMO_001025",
+        "GMO_001815",
+        "GMO_001003",
+        "GMO_001221",
+        "GMO_001903",
+        "GMO_001033",
+        "GMO_001001",
+        "GMO_001037",
+        "GMO_001278",
+        "GMO_001016",
+        "GMO_001300",
+        "GMO_001028",
+        "GMO_001110",
+        "GMO_000012",
+        "GMO_001034",
+        "GMO_001235",
+        "GMO_001005",
+        "GMO_001065",
+        "GMO_001026",
+        "GMO_001058",
+        "GMO_001730",
+        "GMO_001039",
+        "GMO_001023",
+        "GMO_001598",
+        "GMO_001002",
+        "GMO_001162",
+        "GMO_001029"
+      ],
+      "organisms": ["1031537", "1031540", "265606"]
     },
     {
-      "gm_id": "HM_D00065",
-      "name": "GYM STREPTOMYCES MEDIUM",
+      "gm_id": "M2794",
+      "name": "Tryptic soy broth medium supplemented with 0.5% yeast extract, 0.05% cysteine HCl-H2O, 0.5 mg/ml of hemin, 2 μg/ml of vitamin K1, and 5% sheep blood",
+      "original_media_id": "SY4047",
       "components": [
-        "GMO_001001",
+        "GMO_001312",
+        "GMO_002263",
+        "GMO_001205",
+        "GMO_002257",
         "GMO_001003",
-        "GMO_001063",
-        "GMO_001007",
-        "GMO_001059",
-        "GMO_001815"
+        "GMO_002260",
+        "GMO_001117",
+        "GMO_002261",
+        "GMO_001829"
       ],
-      "organisms": ["316284", "446462"]
+      "organisms": ["1747"]
     }
   ],
   "organisms": [
     {
-      "tax_id": "384676",
-      "name": "Pseudomonas entomophila L48"
+      "tax_id": "1031537",
+      "name": "Blastopirellula cremea"
     },
     {
-      "tax_id": "643561",
-      "name": "Acidovorax avenae subsp. avenae ATCC 19860"
+      "tax_id": "1031540",
+      "name": "Rhodopirellula rosea"
     },
     {
-      "tax_id": "316284",
-      "name": "Streptomyces noursei ATCC 11455"
+      "tax_id": "1747",
+      "name": "Cutibacterium acnes"
     },
     {
-      "tax_id": "446462",
-      "name": "Actinosynnema mirum DSM 43827"
+      "tax_id": "265606",
+      "name": "Rhodopirellula baltica"
     }
   ],
   "components": [
     {
-      "gmo_id": "GMO_001001",
-      "name": "Distilled water",
-      "parent": "GMO_001890",
-      "function": "Solvating media"
+      "gmo_id": "GMO_001066",
+      "name": "Seawater",
+      "parent": null,
+      "category": "Solvent",
+      "display_order": 16
+    },
+    {
+      "gmo_id": "GMO_001235",
+      "name": "Artificial seawater",
+      "parent": "GMO_001066",
+      "category": "Solvent",
+      "display_order": 18
+    },
+    {
+      "gmo_id": "GMO_001891",
+      "name": "Water",
+      "parent": null,
+      "category": "Solvent",
+      "display_order": 27
     },
     {
       "gmo_id": "GMO_001890",
       "name": "Purified water",
-      "parent": null,
-      "function": "Solvating media"
+      "parent": "GMO_001891",
+      "category": "Solvent",
+      "display_order": 28
     },
     {
-      "gmo_id": "GMO_001007",
-      "name": "Agar",
-      "parent": null,
-      "function": "Solidifying component"
+      "gmo_id": "GMO_001001",
+      "name": "Distilled water",
+      "parent": "GMO_001890",
+      "category": "Solvent",
+      "display_order": 31
     },
     {
-      "gmo_id": "GMO_001074",
-      "name": "Meat extract",
+      "gmo_id": "GMO_000019",
+      "name": "Prepared culture medium",
       "parent": null,
-      "function": null
+      "category": "Ready-made medium",
+      "display_order": 36
+    },
+    {
+      "gmo_id": "GMO_002116",
+      "name": "Tryptic soy broth",
+      "parent": "GMO_000019",
+      "category": "Ready-made medium",
+      "display_order": 183
+    },
+    {
+      "gmo_id": "GMO_001117",
+      "name": "Bacto &trade; Tryptic soy broth",
+      "parent": "GMO_002116",
+      "category": "Ready-made medium",
+      "display_order": 185
     },
     {
       "gmo_id": "GMO_000012",
       "name": "Peptone",
       "parent": null,
-      "function": null
+      "category": "Peptone",
+      "display_order": 194
+    },
+    {
+      "gmo_id": "GMO_000011",
+      "name": "Extract",
+      "parent": null,
+      "category": "Extract",
+      "display_order": 251
     },
     {
       "gmo_id": "GMO_001003",
       "name": "Yeast extract",
-      "parent": null,
-      "function": "Nutrient source"
+      "parent": "GMO_000011",
+      "category": "Extract",
+      "display_order": 281
     },
     {
-      "gmo_id": "GMO_001063",
-      "name": "Calcium carbonate",
+      "gmo_id": "GMO_001893",
+      "name": "Blood-derived component",
       "parent": null,
-      "function": "Protective agent"
+      "category": "Nutrient component",
+      "display_order": 301
     },
     {
-      "gmo_id": "GMO_001059",
-      "name": "Malt extract",
-      "parent": null,
-      "function": null
+      "gmo_id": "GMO_002257",
+      "name": "Sheep blood",
+      "parent": "GMO_001893",
+      "category": "Nutrient component",
+      "display_order": 346
     },
     {
       "gmo_id": "GMO_001815",
       "name": "Glucose",
       "parent": null,
-      "function": null
+      "category": "Nutrient component (Carbon source)",
+      "display_order": 559
+    },
+    {
+      "gmo_id": "GMO_001026",
+      "name": "4-Aminobenzoic acid",
+      "parent": null,
+      "category": "Growth factor",
+      "display_order": 675
+    },
+    {
+      "gmo_id": "GMO_001025",
+      "name": "Biotin",
+      "parent": null,
+      "category": "Growth factor",
+      "display_order": 689
+    },
+    {
+      "gmo_id": "GMO_001028",
+      "name": "Calcium pantothenate",
+      "parent": null,
+      "category": "Growth factor",
+      "display_order": 693
+    },
+    {
+      "gmo_id": "GMO_001034",
+      "name": "Cobalamin",
+      "parent": null,
+      "category": "Growth factor",
+      "display_order": 698
+    },
+    {
+      "gmo_id": "GMO_001033",
+      "name": "Folic acid",
+      "parent": null,
+      "category": "Growth factor",
+      "display_order": 721
+    },
+    {
+      "gmo_id": "GMO_001312",
+      "name": "Hemin",
+      "parent": null,
+      "category": "Growth factor",
+      "display_order": 724
+    },
+    {
+      "gmo_id": "GMO_001162",
+      "name": "Nicotinamide",
+      "parent": null,
+      "category": "Growth factor",
+      "display_order": 744
+    },
+    {
+      "gmo_id": "GMO_001037",
+      "name": "Riboflavin",
+      "parent": null,
+      "category": "Growth factor",
+      "display_order": 754
+    },
+    {
+      "gmo_id": "GMO_001027",
+      "name": "Thiamine hydrochloride",
+      "parent": null,
+      "category": "Growth factor",
+      "display_order": 771
+    },
+    {
+      "gmo_id": "GMO_001278",
+      "name": "Thiamine hydrochloride dihydrate",
+      "parent": "GMO_001027",
+      "category": "Growth factor",
+      "display_order": 772
+    },
+    {
+      "gmo_id": "GMO_001978",
+      "name": "Vitamin B6",
+      "parent": null,
+      "category": "Growth factor",
+      "display_order": 786
+    },
+    {
+      "gmo_id": "GMO_001632",
+      "name": "Pyridoxine",
+      "parent": "GMO_001978",
+      "category": "Growth factor",
+      "display_order": 794
+    },
+    {
+      "gmo_id": "GMO_001029",
+      "name": "Pyridoxine hydrochloride",
+      "parent": "GMO_001632",
+      "category": "Growth factor",
+      "display_order": 796
+    },
+    {
+      "gmo_id": "GMO_001829",
+      "name": "Vitamin K1",
+      "parent": null,
+      "category": "Growth factor",
+      "display_order": 797
+    },
+    {
+      "gmo_id": "GMO_001984",
+      "name": "Ammonium heptamolybdate",
+      "parent": null,
+      "category": "Mineral source",
+      "display_order": 809
+    },
+    {
+      "gmo_id": "GMO_001221",
+      "name": "Ammonium heptamolybdate tetrahydrate",
+      "parent": "GMO_001984",
+      "category": "Mineral source",
+      "display_order": 810
+    },
+    {
+      "gmo_id": "GMO_001061",
+      "name": "Calcium chloride",
+      "parent": null,
+      "category": "Mineral source",
+      "display_order": 827
+    },
+    {
+      "gmo_id": "GMO_001005",
+      "name": "Calcium chloride dihydrate",
+      "parent": "GMO_001061",
+      "category": "Mineral source",
+      "display_order": 829
+    },
+    {
+      "gmo_id": "GMO_001883",
+      "name": "Cobalt(II) nitrate",
+      "parent": null,
+      "category": "Mineral source",
+      "display_order": 860
+    },
+    {
+      "gmo_id": "GMO_001110",
+      "name": "Cobalt(II) nitrate hexahydrate",
+      "parent": "GMO_001883",
+      "category": "Mineral source",
+      "display_order": 861
+    },
+    {
+      "gmo_id": "GMO_001103",
+      "name": "Copper(II) sulfate",
+      "parent": null,
+      "category": "Mineral source",
+      "display_order": 871
+    },
+    {
+      "gmo_id": "GMO_001039",
+      "name": "Copper(II) sulfate pentahydrate",
+      "parent": "GMO_001103",
+      "category": "Mineral source",
+      "display_order": 875
+    },
+    {
+      "gmo_id": "GMO_001187",
+      "name": "Disodium tetraborate",
+      "parent": null,
+      "category": "Mineral source",
+      "display_order": 880
+    },
+    {
+      "gmo_id": "GMO_001598",
+      "name": "Borax",
+      "parent": "GMO_001187",
+      "category": "Mineral source",
+      "display_order": 881
+    },
+    {
+      "gmo_id": "GMO_001337",
+      "name": "Iron(II) sulfate",
+      "parent": null,
+      "category": "Mineral source",
+      "display_order": 894
+    },
+    {
+      "gmo_id": "GMO_001016",
+      "name": "Iron(II) sulfate heptahydrate",
+      "parent": "GMO_001337",
+      "category": "Mineral source",
+      "display_order": 895
+    },
+    {
+      "gmo_id": "GMO_001096",
+      "name": "Magnesium sulfate",
+      "parent": null,
+      "category": "Mineral source",
+      "display_order": 936
+    },
+    {
+      "gmo_id": "GMO_001002",
+      "name": "Magnesium sulfate heptahydrate",
+      "parent": "GMO_001096",
+      "category": "Mineral source",
+      "display_order": 939
+    },
+    {
+      "gmo_id": "GMO_001763",
+      "name": "Manganese sulfate",
+      "parent": null,
+      "category": "Mineral source",
+      "display_order": 951
+    },
+    {
+      "gmo_id": "GMO_001065",
+      "name": "Manganese sulfate n-hydrate",
+      "parent": "GMO_001763",
+      "category": "Mineral source",
+      "display_order": 956
+    },
+    {
+      "gmo_id": "GMO_001053",
+      "name": "Nitrilotriacetic acid",
+      "parent": null,
+      "category": "Mineral source",
+      "display_order": 973
+    },
+    {
+      "gmo_id": "GMO_001902",
+      "name": "Potassium hydroxide",
+      "parent": null,
+      "category": "Mineral source",
+      "display_order": 983
+    },
+    {
+      "gmo_id": "GMO_001903",
+      "name": "Potassium hydroxide solution",
+      "parent": "GMO_001902",
+      "category": "Mineral source",
+      "display_order": 984
+    },
+    {
+      "gmo_id": "GMO_001764",
+      "name": "Zinc sulfate",
+      "parent": null,
+      "category": "Mineral source",
+      "display_order": 1051
+    },
+    {
+      "gmo_id": "GMO_001023",
+      "name": "Zinc sulfate heptahydrate",
+      "parent": "GMO_001764",
+      "category": "Mineral source",
+      "display_order": 1053
+    },
+    {
+      "gmo_id": "GMO_002260",
+      "name": "Carbon dioxide gas",
+      "parent": null,
+      "category": "Gas",
+      "display_order": 1128
+    },
+    {
+      "gmo_id": "GMO_002263",
+      "name": "Hydrogen gas",
+      "parent": null,
+      "category": "Gas",
+      "display_order": 1130
+    },
+    {
+      "gmo_id": "GMO_002261",
+      "name": "Nitrogen gas",
+      "parent": null,
+      "category": "Gas",
+      "display_order": 1134
+    },
+    {
+      "gmo_id": "GMO_001233",
+      "name": "Tris",
+      "parent": null,
+      "category": "Buffer",
+      "display_order": 1200
+    },
+    {
+      "gmo_id": "GMO_001730",
+      "name": "Tris buffer",
+      "parent": "GMO_001233",
+      "category": "Buffer",
+      "display_order": 1201
+    },
+    {
+      "gmo_id": "GMO_001032",
+      "name": "Cysteine hydrochloride",
+      "parent": null,
+      "category": "Other",
+      "display_order": 1228
+    },
+    {
+      "gmo_id": "GMO_001205",
+      "name": "L-Cysteine hydrochloride monohydrate",
+      "parent": "GMO_001032",
+      "category": "Other",
+      "display_order": 1232
+    },
+    {
+      "gmo_id": "GMO_001058",
+      "name": "Disodium EDTA",
+      "parent": null,
+      "category": "Other",
+      "display_order": 1239
+    },
+    {
+      "gmo_id": "GMO_001078",
+      "name": "Sodium hydroxide",
+      "parent": null,
+      "category": "Other",
+      "display_order": 1326
+    },
+    {
+      "gmo_id": "GMO_001300",
+      "name": "Sodium hydroxide solution",
+      "parent": "GMO_001078",
+      "category": "Other",
+      "display_order": 1327
     }
   ]
 }
